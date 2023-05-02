@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css';
+import logo from '../../assets/images/logo/logo_white.svg';
 
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
@@ -13,13 +14,15 @@ const Footer = () => {
           <Col lg='4' className='mb-4' md='6'>
             <div className='logo'>
               <div>
-                <h1 className='text-white'>ShopMania</h1>
+                <h1 className='text-white'>
+                <img src={logo} alt='logo' style={{width:"250px"}} />
+                </h1>
               </div>
             </div>
             <p className='footer_text mt-4'>
-              "Shop with ease and elevate your everyday essentials - discover
-              our range of chairs, mobile phones, wireless headsets, and smart
-              watches today!"
+              Print Studio is an ecommerce shop <br /> 
+              that specializes in providing high-quality <br /> 
+              custom print products. 
             </p>
           </Col>
           <Col lg='3' md='3' className='mb-4'>

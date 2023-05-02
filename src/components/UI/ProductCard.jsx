@@ -26,6 +26,7 @@ const ProductCard = ({ item }) => {
 
   return (
     <Col lg='3' md='4' className='mb-2'>
+      
       <div className='card1' style={{background:"var(--primary-color)", padding: "10px", marginBottom: "10px" }}>
       <div className='product_item'>
         <div className='product_img'>
@@ -39,10 +40,10 @@ const ProductCard = ({ item }) => {
           <h3 className='product_name'>
             <Link to={`/shop/${item.id}`}>{item.productName}</Link>
           </h3>
-          <span>{item.category}</span>
+          <span style={{color: "white" }}>{item.category}</span>
         </div>
         <div className='product_card-bottom d-flex align-items-center justify-content-between p-2'>
-          <span className='price'>${item.price}</span>
+          <span className='price'>₱{item.price}</span>
           <button className='button-cart' style={{background:"white", width: "120px", border:"none", borderRadius: "15px"}}>
           <motion.span whileTap={{ scale: 1.2 }} onClick={addToCart}>
             <span style={{fontWeight: "900", color: "var(--primary-color)"}}>add to cart</span>
@@ -51,6 +52,7 @@ const ProductCard = ({ item }) => {
         </div>
       </div>
       </div>
+    
     </Col>
   );
 };

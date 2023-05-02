@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SortDropdown from '../components/UI/SortDropdown';
 
 import CommonSection from '../components/UI/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
@@ -10,44 +11,46 @@ import ProductList from '../components/UI/ProductList';
 
 const Shop = () => {
   const [productsData, setProductsData] = useState(products);
+  const [sortOption, setSortOption] = useState('best-match');
+
 
   const handleFilter = (e) => {
     const filterValue = e.target.value;
-    if (filterValue === 'jersey') {
+    if (filterValue === 'Jersey') {
       const filteredProducts = products.filter(
-        (item) => item.category === 'jersey'
+        (item) => item.category === 'Jersey'
       );
 
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === 'cap') {
+    if (filterValue === 'Cap') {
       const filteredProducts = products.filter(
-        (item) => item.category === 'cap'
+        (item) => item.category === 'Cap'
       );
 
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === 'jacket') {
+    if (filterValue === 'Jacket') {
       const filteredProducts = products.filter(
-        (item) => item.category === 'jacket'
+        (item) => item.category === 'Jacket'
       );
 
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === 'mug') {
+    if (filterValue === 'Mug') {
       const filteredProducts = products.filter(
-        (item) => item.category === 'mug'
+        (item) => item.category === 'Mug'
       );
 
       setProductsData(filteredProducts);
     }
 
-    if (filterValue === 'tshirt') {
+    if (filterValue === 'Tshirt') {
       const filteredProducts = products.filter(
-        (item) => item.category === 'tshirt'
+        (item) => item.category === 'Tshirt'
       );
 
       setProductsData(filteredProducts);
@@ -64,6 +67,56 @@ const Shop = () => {
     setProductsData(searchedProducts);
   };
 
+
+  // const handleSort = (e) => {
+  //   const sortValue = e.target.value;
+
+  //   if (sortOption === 'popularity') {
+  //     const sortedProducts = [...products].sort((a, b) => b.popularity - a.popularity);
+  //     setProductsData(sortedProducts);
+  //   }
+    
+  //   if (sortOption === 'high-to-low') {
+  //     const sortedProducts = [...products].sort((a, b) => b.price - a.price);
+  //     setProductsData(sortedProducts);
+  //   }
+    
+  //   if (sortOption === 'low-to-high') {
+  //     const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+  //     setProductsData(sortedProducts);
+  //   }
+    
+  //   if (sortOption === 'top-rated') {
+  //     const sortedProducts = [...products].sort((a, b) => b.rating - a.rating);
+  //     setProductsData(sortedProducts);
+  //   }
+  // };
+
+  const handleSort = (sortValue) => {
+    setSortOption(sortValue);
+
+    let sortedProducts = [...productsData];
+    switch (sortValue) {
+      case 'popularity':
+        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+        break;
+      case 'price-high':
+        sortedProducts.sort((a, b) => b.price - a.price);
+        break;
+      case 'price-low':
+        sortedProducts.sort((a, b) => a.price - b.price);
+        break;
+      case 'top-rated':
+        sortedProducts.sort((a, b) => b.rating - a.rating);
+        break;
+      default:
+        // no sorting
+        break;
+    }
+
+    setProductsData(sortedProducts);
+  };
+
   return (
     <Helmet title='shop'>
       <CommonSection title='Products' />
@@ -75,24 +128,17 @@ const Shop = () => {
               <div className='filter_widget'>
                 <select onChange={handleFilter}>
                   <option>Filter By Category</option>
-                  <option value='tshirt'>Tshirt</option>
-                  <option value='mug'>Mug</option>
-                  <option value='jacket'>Jacket</option>
-                  <option value='cap'>Cap</option>
-                  <option value='jersey'>Jersey</option>
+                  <option value='Tshirt'>Tshirt</option>
+                  <option value='Mug'>Mug</option>
+                  <option value='Jacket'>Jacket</option>
+                  <option value='Cap'>Cap</option>
+                  <option value='Jersey'>Jersey</option>
                 </select>
               </div>
             </Col>
             <Col lg='3' md='3'>
               <div className='filter_widget'>
-                <select>
-                  <option>Sort By</option>
-                  <option value='best-match'>Best Match</option>
-                  <option value='popularity'>Popularity</option>
-                  <option value='high-to-low'>Price: high to low</option>
-                  <option value='low-to-high'>Price: low to high</option>
-                  <option value='top-rated'>Top Rated</option>
-                </select>
+              <SortDropdown sortOption={sortOption} onSort={handleSort} />
               </div>
             </Col>
             <Col lg='6' md='6'>

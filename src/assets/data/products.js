@@ -18,37 +18,17 @@ import jersey02 from "../images/jersey02.jpg";
 import jersey03 from "../images/jersey03.jpg";
 import jersey04 from "../images/jersey04.jpg";
 
-// import productImg06 from "../images/single-sofa-03.jpg";
-// import productImg007 from "../images/single-sofa-04.png";
-
-// import productImg07 from "../images/arm-chair-01.jpg";
-// import productImg08 from "../images/arm-chair-02.jpg";
-// import productImg09 from "../images/arm-chair-03.jpg";
-// import productImg10 from "../images/arm-chair-01.jpg";
-
-// import productImg13 from "../images/phone-01.jpg";
-// import productImg14 from "../images/phone-02.jpg";
-// import productImg15 from "../images/phone-03.png";
-// import productImg16 from "../images/phone-04.jpg";
-// import productImg17 from "../images/phone-05.jpg";
-// import productImg18 from "../images/phone-06.jpg";
-
-import productImg19 from "../images/watch-01.jpg";
-import productImg20 from "../images/watch-02.jpg";
-// import productImg21 from "../images/watch-03.jpg";
-import productImg22 from "../images/watch-04.jpg";
-import cap01 from "../images/cap01.jpg";
-
-import productImg23 from "../images/wireless-01.png";
-
-// import productImg25 from "../images/wireless-03.png";
+import cap01 from "../images/cap01.jpg"
+import cap02 from "../images/cap02.jpg"
+import cap03 from "../images/cap03.jpg"
+import cap04 from "../images/cap04.jpg"
 
 const products = [
   {
     id: "01",
     productName: "Wokong Robot ",
     imgUrl: tshirt01,
-    category: "tshirt",
+    category: "Tshirt",
     price: 400,
     shortDesc:
       "Extra Deep Down Filled Couch W, 89 Sofa, Cream",
@@ -67,7 +47,7 @@ const products = [
     id: "02",
     productName: "Astronaut",
     imgUrl: tshirt02,
-    category: "tshirt",
+    category: "Tshirt",
     price: 353,
     shortDesc:
       "Modern high-quality fabric that is both comfortable and durable",
@@ -90,7 +70,7 @@ const products = [
     id: "03",
     productName: "MotoBots",
     imgUrl: tshirt03,
-    category: "tshirt",
+    category: "Tshirt",
     price: 473,
     shortDesc:
       "Rivet Aiden Mid-Century Modern Sofa Couch (86.6 W) - Wathet Blue",
@@ -112,7 +92,7 @@ const products = [
     id: "04",
     productName: "Berserker",
     imgUrl: tshirt04,
-    category: "tshirt",
+    category: "Tshirt",
     price: 253,
     shortDesc:
       "Velvet & Antique Platinum",
@@ -134,7 +114,7 @@ const products = [
     id: "05",
     productName: "One Piece Sabo",
     imgUrl: mug01,
-    category: "mug",
+    category: "Mug",
     price: 150,
     shortDesc:
       "Genuine Sheepskin Rug Linen Real Australia Sheepskin Natural Luxury Fluffy Lambskin ",
@@ -157,7 +137,7 @@ const products = [
     id: "06",
     productName: "One Piece Soro",
     imgUrl: mug02,
-    category: "mug",
+    category: "Mug",
     price: 150,
     shortDesc:
       "Amazon Brand - Faux Velvet Sofa Contemporary Velvet Sofa Couch",
@@ -180,7 +160,7 @@ const products = [
     id: "07",
     productName: "Luffy One Piece",
     imgUrl: mug03,
-    category: "mug",
+    category: "Mug",
     price: 150,
     shortDesc:
       "Genuine Sheepskin Rug Linen Real Australia Sheepskin Natural Luxury Fluffy Lambskin",
@@ -202,7 +182,7 @@ const products = [
     id: "08",
     productName: "Ace One Piece",
     imgUrl: mug04,
-    category: "mug",
+    category: "Mug",
     price: 150,
     shortDesc:
       "Century Modern Fabric Arm Chair",
@@ -225,7 +205,7 @@ const products = [
     id: "09",
     productName: "Kidd One Piece",
     imgUrl: jacket01,
-    category: "jacket",
+    category: "Jacket",
     price: 899,
     shortDesc:
       "Loveseat/Sofa/Couch with Armrest Pockets",
@@ -248,7 +228,7 @@ const products = [
     id: "10",
     productName: "Luffy One Piece",
     imgUrl: jacket02,
-    category: "jacket",
+    category: "Jacket",
     price: 899,
     shortDesc:
       "LeatherSoft Executive Swivel",
@@ -271,7 +251,7 @@ const products = [
     id: "11",
     productName: "Trifagar One Piece",
     imgUrl: jacket03,
-    category: "jacket",
+    category: "Jacket",
     price: 899,
     shortDesc:
       "Extra Wide Arms,Back Support 14 Angles Adjustable Comfortable Double Mesh Fabric",
@@ -294,7 +274,7 @@ const products = [
     id: "12",
     productName: "One Piece Jacket",
     imgUrl: jacket04,
-    category: "jacket",
+    category: "Jacket",
     price: 899,
     shortDesc:
       "Apple iPhone 12 Pro, 128GB, Pacific Blue - Unlocked (Renewed Premium)",
@@ -316,7 +296,7 @@ const products = [
     id: "13",
     productName: "Jersy Design1",
     imgUrl: jersey01,
-    category: "jersey",
+    category: "Jersey",
     price: 1120,
     shortDesc:
       "Century Modern Fabric Arm Chair",
@@ -338,7 +318,7 @@ const products = [
     id: "14",
     productName: "Jersy Design2",
     imgUrl: jersey02,
-    category: "jersey",
+    category: "Jersey",
     price: 1120,
     shortDesc:
       "Apple iPhone 12 Pro Max, 256GB, Pacific Blue - Unlocked (Renewed Premium)",
@@ -361,7 +341,7 @@ const products = [
     id: "15",
     productName: "Jersy Design3",
     imgUrl: jersey03,
-    category: "jersey",
+    category: "Jersey",
     price: 1120,
     shortDesc:
       "realme 8 5G + 4G Volte GSM Unlocked Global USA Latin Europe Octa Core 48MP Triple Camera",
@@ -384,7 +364,7 @@ const products = [
     id: "16",
     productName: "Jersy Design4",
     imgUrl: jersey04,
-    category: "jersey",
+    category: "Jersey",
     price: 1120,
     shortDesc:
       "OnePlus Nord N200 | 5G Unlocked Android Smartphone U.S Version | 6.49 Full HD+LCD Screen",
@@ -404,9 +384,9 @@ const products = [
   },
   {
     id: "17",
-    productName: "Timex Easy Reader Watch",
-    imgUrl: productImg20,
-    category: "cap",
+    productName: "One Piece Cap",
+    imgUrl: cap01,
+    category: "Cap",
     price: 299,
     shortDesc:
       "Timex Easy Reader Day-Date Expansion Band Watch",
@@ -427,9 +407,9 @@ const products = [
 
   {
     id: "18",
-    productName: "Rolex Watch",
-    imgUrl: cap01,
-    category: "cap",
+    productName: "PlayBoy Cap",
+    imgUrl: cap02,
+    category: "Cap",
     price: 299,
     shortDesc:
       "Rolex ROLEX GMT Master 126710BLRO Black Dial Watch Men's (W224631) [Parallel Import], Bracelet",
@@ -450,9 +430,9 @@ const products = [
 
   {
     id: "19",
-    productName: "Apple Watch",
-    imgUrl: productImg22,
-    category: "cap",
+    productName: "Zombie Cap",
+    imgUrl: cap03,
+    category: "Cap",
     price: 399,
     shortDesc:
       "Apple Watch SE (2nd Gen) [GPS 44mm] Smart Watch w/Midnight Aluminum Case & Midnight Sport Band - S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina Display, Water Resistant",
@@ -473,9 +453,9 @@ const products = [
 
   {
     id: "20",
-    productName: "Beat Studio Wireless",
-    imgUrl: productImg23,
-    category: "cap",
+    productName: "BlackBalls Cap",
+    imgUrl: cap04,
+    category: "Cap",
     price: 199,
     shortDesc:
       "Beats by Dr. Dre Studio 3 Wireless Over-Ear Headphones with Built-in Mic - White (Renewed)",

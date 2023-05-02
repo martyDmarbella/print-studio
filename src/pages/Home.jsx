@@ -9,7 +9,7 @@ import products from '../assets/data/products';
 import Services from '../services/Services';
 import ProductList from '../components/UI/ProductList';
 import Clock from '../components/UI/Clock';
-import counterImg from '../assets/images/counter-timer-img.png';
+import counterImg from '../assets/images/counter-timer-img.gif';
 
 const Home = () => {
   const [trendingProducts, setTrendingProducts] = useState([]);
@@ -21,23 +21,23 @@ const Home = () => {
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(
-      (item) => item.category === 'tshirt'
+      (item) => item.category === 'Tshirt'
     );
 
     const filteredBestSalesProducts = products.filter(
-      (item) => item.category === 'jersey'
+      (item) => item.category === 'Jersey'
     );
 
     const filteredcapProducts = products.filter(
-      (item) => item.category === 'cap'
+      (item) => item.category === 'Cap'
     );
 
     const filteredjacketProducts = products.filter(
-      (item) => item.category === 'jacket'
+      (item) => item.category === 'Jacket'
     );
 
     const filteredPopularProducts = products.filter(
-      (item) => item.category === 'mug'
+      (item) => item.category === 'Mug'
     );
 
     setTrendingProducts(filteredTrendingProducts);
@@ -109,7 +109,7 @@ const Home = () => {
             <Col lg='6' md='12' className='count_down-col'>
               <div className='clock_top-content'>
                 <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
-                <h3 className='text-white fs-5 mb-3'>Quality One Piece Jacket</h3>
+                <h3 className='text-white fs-5 mb-3'>Quality Customise Jersey</h3>
               </div>
               <Clock />
 
@@ -121,7 +121,7 @@ const Home = () => {
               </motion.button>
             </Col>
             <Col lg='6' md='12' className='text-end counter_img'>
-              <img src={counterImg} alt='sale_chair' />
+              <img src={counterImg} alt='sale_jersey' />
             </Col>
           </Row>
         </Container>
