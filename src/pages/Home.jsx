@@ -53,17 +53,13 @@ const Home = () => {
           <Row>
             <Col lg='4' md='4'>
               <div className='hero_content'>
-                <p className='hero_subtitle'>Trending product in {year}</p>
-                <h2>Make Your Interior More Minimalistic & Modern</h2>
+                <p className='hero_subtitle'>Print Studio {year}</p>
+                <h2>High-quality solutions for all your printing needs!</h2>
                 <p>
-                  Transform your living space into a sleek, modern oasis with
-                  our minimalist interior design solutions. Say goodbye to
-                  clutter and embrace clean lines, neutral color palettes, and
-                  functional yet stylish decor. Our team of experts will work
-                  with you to create a space that reflects your personal style
-                  and elevates your daily living experience. Discover the power
-                  of minimalism and create a home that is both calming and
-                  inspiring.
+                  Welcome to our Print Studio, where creativity meets technology. Our team of experts is dedicated to 
+                  providing high-quality printing services that exceed your expectations. From graphic design to 
+                  large-format printing, we offer a wide range of solutions to suit your needs. Let us bring your 
+                  ideas to life and make your vision a reality.
                 </p>
 
                 <motion.button whileTap={{ scale: 1.2 }} className='shop_btn'>
