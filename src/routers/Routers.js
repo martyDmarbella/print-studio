@@ -10,6 +10,7 @@ import Signup from '../pages/Signup';
 import AboutUs from '../pages/AboutUs';
 import Contact from '../pages/Contact';
 import CustomerAccount from '../pages/CustomerAccount';
+import CustomerAddresses from '../pages/CustomerAddresses';
 
 const Routers = () => {
   return (
@@ -25,6 +26,7 @@ const Routers = () => {
       <Route path='/login' element={<Login />} />
       <Route path='signup' element={<Signup />} />
       <Route path='/account' element={<CustomerAccount />} />
+      <Route path='/customer-addresses' element={<CustomerAddresses />} />
     </Routes>
   );
 };
