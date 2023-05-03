@@ -33,7 +33,6 @@ import jersey04 from "../images/jersey04.jpg";
 // import productImg17 from "../images/phone-05.jpg";
 // import productImg18 from "../images/phone-06.jpg";
 
-import productImg19 from "../images/watch-01.jpg";
 import productImg20 from "../images/watch-02.jpg";
 // import productImg21 from "../images/watch-03.jpg";
 import productImg22 from "../images/watch-04.jpg";

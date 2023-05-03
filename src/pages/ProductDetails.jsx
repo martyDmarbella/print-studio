@@ -17,8 +17,6 @@ const ProductDetails = () => {
     productName,
     price,
     avgRating,
-    review,
-    description,
     shortDesc,
   } = product;
 

@@ -3,7 +3,7 @@ class CartItem {
     this.id = id;
     this.title = title;
     this.price = price;
-    this.quantity = 1;
+    this.quantity = 0;
   }
 }
 
@@ -11,9 +11,9 @@ let cart = [];
 let wishlist = [];
 
 function addToCart(id, title, price) {
-  const existingItem = cart.find((item) => item.id === id);
-  if (existingItem) {
-    existingItem.quantity++;
+  const existingItemIndex = cart.findIndex((item) => item.id === id);
+  if (existingItemIndex !== -1) {
+    cart[existingItemIndex].quantity++;
   } else {
     const newItem = new CartItem(id, title, price);
     cart.push(newItem);
@@ -21,6 +21,7 @@ function addToCart(id, title, price) {
   updateCartDropdown();
 }
 
+  
 function addToWishlist(id, title, price) {
   const existingItem = wishlist.find((item) => item.id === id);
   if (!existingItem) {
@@ -49,7 +50,7 @@ function updateCartDropdown() {
   cart.forEach((item) => {
     cartDropdownContent += `
       <div class="dropdown-item">
-        <img src="https://via.placeholder.com/50" alt="Product Image">
+        <img src={item.id} alt="Product Image">
         <div class="item-details">
           <h6>${item.title}</h6>
           <div class="item-quantity d-flex align-items-center">

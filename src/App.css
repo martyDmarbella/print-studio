@@ -34,6 +34,7 @@ h6,
 p {
   padding: 0;
   margin: 0;
+  color: #1197F5;
 }
 
 p {
@@ -61,11 +62,6 @@ img {
 
 section {
   padding: 60px 0px;
-}
-
-.section_title {
-  color: var(--primary-color);
-  font-weight: 600;
 }
 
 .section-white {
