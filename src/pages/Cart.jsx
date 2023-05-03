@@ -1,16 +1,21 @@
-import React from 'react';
-import '../styles/cart.css';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
 import { Container, Row, Col } from 'reactstrap';
 
-import tdImg from '../assets/images/arm-chair-01.jpg';
-import { motion } from 'framer-motion';
-import { cartActions } from '../redux/slices/cartSlice';
-import { useSelector, useDispatch } from 'react-redux';
-
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const [updatedCartItems, setUpdatedCartItems] = useState(cartItems);
+
+  const handleRemoveItem = (index) => {
+    const newCartItems = [...updatedCartItems];
+    newCartItems.splice(index, 1);
+    setUpdatedCartItems(newCartItems);
+  }
+
+  // calculate the total amount
+  const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <Helmet title='Cart'>
@@ -19,7 +24,7 @@ const Cart = () => {
         <Container>
           <Row>
             <Col lg='9'>
-              {cartItems.length === 0 ? (
+              {updatedCartItems.length === 0 ? (
                 <h2 className='fs-4 text-center'>No item added to the cart</h2>
               ) : (
                 <table className='table bordered'>
@@ -29,21 +34,21 @@ const Cart = () => {
                       <th>Title</th>
                       <th>Price</th>
                       <th>Qty</th>
-                      <motion.th whileTap={{ scale: 1.2 }}>Delete</motion.th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
 
                   <tbody>
-                    {cartItems.map((item, index) => (
-                      <tr>
+                    {updatedCartItems.map((item, index) => (
+                      <tr key={index}>
                         <td>
-                          <img src={item.imgUrl} alt='cart-image' />
+                          <img src={item.imgUrl} alt='product' />
                         </td>
                         <td>{item.productName}</td>
+                        <td>₱{item.price}</td>
                         <td>{item.quantity}</td>
-                        <td>2px</td>
                         <td>
-                          <i className='ri-delete-bin-line'></i>
+                          <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
                         </td>
                       </tr>
                     ))}
@@ -52,7 +57,16 @@ const Cart = () => {
               )}
             </Col>
 
-            <Col lg='3'></Col>
+            <Col lg='3'>
+              {/* display the total amount */}
+              <div className='card'>
+                <div className='card-body'>
+                  <h5 className='card-title'>Total Amount:</h5>
+                  <h6 className='card-subtitle mb-2 text-muted'>₱{totalAmount.toFixed(2)}</h6>
+                  <button className='btn btn-primary'>Proceed to Checkout</button>
+                </div>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>

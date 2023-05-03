@@ -8,11 +8,10 @@
 }
 
 .product_rating span i {
-  color: coral;
+  color: yellow;
 }
 
 .product_rating span {
-  color: coral;
   font-weight: 500;
 }
 

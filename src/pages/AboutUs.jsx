@@ -11,7 +11,7 @@ const AboutUs = () => {
                     <div className="row">
 
                         <div className="col-md-12 text-center">
-                            <h2 className="section-title">
+                            <h2>
                                 The Team Behind Print Studio
                             </h2>
                             <p className="section-subtitle">

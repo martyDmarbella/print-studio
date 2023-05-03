@@ -17,7 +17,6 @@ import jersey01 from "../images/jersey01.jpg";
 import jersey02 from "../images/jersey02.jpg";
 import jersey03 from "../images/jersey03.jpg";
 import jersey04 from "../images/jersey04.jpg";
-
 import cap01 from "../images/cap01.jpg"
 import cap02 from "../images/cap02.jpg"
 import cap03 from "../images/cap03.jpg"

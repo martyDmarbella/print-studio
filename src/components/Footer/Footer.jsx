@@ -14,6 +14,7 @@ const Footer = () => {
           <Col lg='4' className='mb-4' md='6'>
             <div className='logo'>
               <div>
+
                 <h1 className='text-white'>
                 <img src={logo} alt='logo' style={{width:"250px"}} />
                 </h1>
@@ -79,19 +80,19 @@ const Footer = () => {
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span>
                     <i class='ri-map-pin-line'></i>
-                    <p>0504 Purok 2, General Lim, Orion, Bataan 2012, PH</p>
+                    <p>Located at Bgc</p>
                   </span>
                 </ListGroupItem>
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span>
                     <i class='ri-phone-line'></i>
-                    <p>+639952801191</p>
+                    <p>+639***8***3</p>
                   </span>
                 </ListGroupItem>
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span>
                     <i class='ri-mail-line'></i>
-                    <p>camrynchelsea01@gmail.com</p>
+                    <p>marbella.tino@gmail.com</p>
                   </span>
                 </ListGroupItem>
               </ListGroup>
@@ -99,7 +100,7 @@ const Footer = () => {
           </Col>
           <Col lg='12'>
             <p className='footer_copyright'>
-              Copyright {year} developed by Rossrival Bendillo & Jaime Yanoc.
+              Copyright {year} developed by Jayson Herrere, Marty D. Marbella & Jaime Yanoc.
               All rights reserved.
             </p>
           </Col>

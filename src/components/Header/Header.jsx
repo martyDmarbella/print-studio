@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './header.css';
 
+
 import { motion } from 'framer-motion';
 
 import logo from '../../assets/images/logo/logo.svg';
@@ -9,6 +10,7 @@ import userIcon from '../../assets/images/user-icon.png';
 
 import { Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const nav_links = [
   {
@@ -23,10 +25,10 @@ const nav_links = [
     path: 'about-us',
     display: 'About Us',
   },
-  {
-    path: 'cart',
-    display: 'Cart',
-  },
+  // {
+  //   path: 'cart',
+  //   display: 'Cart',
+  // },
   {
     path: 'contact-us',
     display: 'Contact Us',
@@ -57,6 +59,15 @@ const Header = () => {
   }, []);
 
   const menuToggle = () => menuRef.current.classList.toggle('active_menu');
+
+  
+  const navigate = useNavigate();
+  const navigateToCart = () => {
+    navigate('/cart');
+  };
+
+
+
 
   return (
     <header className='header' ref={headerRef}>
@@ -89,7 +100,7 @@ const Header = () => {
                 <i class='ri-heart-line'></i>
                 <span className='badge'>2</span>
               </span>
-              <span className='cart_icon'>
+              <span className='cart_icon' onClick={navigateToCart}>
                 <i class='ri-shopping-bag-line'></i>
                 <span className='badge'>{totalQuantity}</span>
               </span>
