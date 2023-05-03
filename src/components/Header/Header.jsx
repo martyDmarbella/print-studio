@@ -65,9 +65,9 @@ const Header = () => {
   const navigateToCart = () => {
     navigate('/cart');
   };
-
-
-
+  const handleProfileClick = () => {
+    navigate('/account');
+  }
 
   return (
     <header className='header' ref={headerRef}>
@@ -105,7 +105,7 @@ const Header = () => {
                 <span className='badge'>{totalQuantity}</span>
               </span>
 
-              <span>
+              <span onClick={handleProfileClick}> 
                 <motion.img
                   whileTap={{ scale: 1.2 }}
                   src={userIcon}
