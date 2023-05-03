@@ -1,4 +1,6 @@
 import jaime from "../assets/images/jaime.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag, faUser, faMapMarker, faKey } from '@fortawesome/free-solid-svg-icons';
 import CustomerAddresses from "./CustomerAddresses";
 
 function CustomerAccount() {
@@ -48,24 +50,23 @@ function CustomerAccount() {
           <div className="row gx-5 gy-5">
 
             <div className="col-xl-3 col-lg-4">
-              <div className="bg-light text-center p-4 rounded-top-lg border border-bottom-0"><a className="d-inline-block" href="#"><img className="img-fluid rounded-circle img-thumbnail p-2 mb-3" src={jaime} width="150" alt="..." /></a>
+              <div className="bg-light text-center p-4 rounded-top-lg border border-bottom-0"><a className="d-inline-block" href="#Profile"><img className="img-fluid rounded-circle img-thumbnail p-2 mb-3" src={jaime} width="150" alt="..." /></a>
                 <h5>Jaime Yanoc</h5>
                 <p className="text-muted text-small">Ostrava, Czech republic</p>
               </div>
 
-              <nav className="list-group"><a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-orders.html"><span className="fw-normal text-sm text-dark py-1">
-                <svg className="svg-icon me-2 svg-icon-sm svg-icon-heavy">
-                  <use href="#shopping-bag-1"> </use>
-                </svg>Orders</span><small className="badge rounded-pill bg-primary">5</small></a><a className="active list-group-item list-group-item-action d-flex justify-content-between align-items-center rounded-0" href="customer-account.html" aria-current="true"><span className="fw-normal text-sm py-1">
-                  <svg className="svg-icon me-2 svg-icon-sm svg-icon-heavy">
-                    <use href="#user-1"> </use>
-                  </svg>Profile</span></a><a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/customer-addresses"><span className="fw-normal text-sm text-dark py-1">
-                    <svg className="svg-icon me-2 svg-icon-sm svg-icon-heavy">
-                      <use href="#map-marker-1"> </use>
-                    </svg>Addresses</span></a><a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-login.html"><span className="fw-normal text-sm text-dark py-1">
-                      <svg className="svg-icon me-2 svg-icon-sm svg-icon-heavy">
-                        <use href="#key-1"> </use>
-                      </svg>Log out</span></a>
+              <nav className="list-group">
+                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-orders.html">
+                <span className="fw-normal text-sm text-dark py-1">
+                <FontAwesomeIcon icon={faShoppingBag} /> Orders</span></a>
+                <a className="active list-group-item list-group-item-action d-flex justify-content-between align-items-center rounded-0" href="customer-account.html" aria-current="true">
+                <span className="fw-normal text-sm py-1">
+                <FontAwesomeIcon icon={faUser} /> Profile</span></a><a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/customer-addresses">
+                <span className="fw-normal text-sm text-dark py-1">
+                <FontAwesomeIcon icon={faMapMarker} /> Addresses </span></a>
+                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-login.html">
+                <span className="fw-normal text-sm text-dark py-1">
+                <FontAwesomeIcon icon={faKey} /> Log out</span></a>
               </nav>
 
             </div>
