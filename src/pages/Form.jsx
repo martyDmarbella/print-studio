@@ -1,51 +1,56 @@
-import React, { useState } from 'react';
+import React from "react";
+import { useFormik } from "formik";
 
 function Form() {
-  const [formData, setFormData] = useState({});
 
-  const handleChange = event => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    // do something with the form data
-  };
+  const formik = useFormik({
+    initialValues: {
+      firstname: '',
+      lastname: '',
+      street: '',
+      city: '',
+      zip: '',
+      region: '',
+      province: '',
+      phone: '',
+      email: '',
+    },
+    onSubmit: values =>{
+      console.log('Form data', values)
+    }
+  })
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
         <div className="row gy-3">
           <div className="col-sm-6">
-            <label className="form-label" for="firstname" required="required" onChange={handleChange}>Firstname</label>
-            <input className="form-control" id="firstname" required="required" type="text" />
+            <label className="form-label" for="firstname" required="required">Firstname</label>
+            <input className="form-control" id="firstname" required="required" type="text" onChange={formik.handleChange} value={formik.values.firstname} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="lastname" required="required" onChange={handleChange}>Lastname</label>
-            <input className="form-control" id="lastname" required="required" type="text" />
+            <label className="form-label" for="lastname" required="required" >Lastname</label>
+            <input className="form-control" id="lastname" required="required" type="text" onChange={formik.handleChange} value={formik.values.lastname} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="company" required="required" onChange={handleChange}>Company</label>
+            <label className="form-label" for="company" required="required">Company</label>
             <input className="form-control" id="company" required="required" type="text" />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="street" required="required" onChange={handleChange}>Street</label>
-            <input className="form-control" id="street" required="required" type="text" />
+            <label className="form-label" for="street" required="required">Street</label>
+            <input className="form-control" id="street" required="required" type="text" onChange={formik.handleChange} value={formik.values.street} />
           </div>
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="city" required="required" onChange={handleChange}>City</label>
-            <input className="form-control" id="city" required="required" type="text" />
+            <label className="form-label" for="city" required="required">City</label>
+            <input className="form-control" id="city" required="required" type="text" onChange={formik.handleChange} value={formik.values.city}  />
           </div>
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="zip" required="required" onChange={handleChange}>ZIP</label>
-            <input className="form-control" id="zip" required="required" type="text" />
+            <label className="form-label" for="zip" required="required">ZIP</label>
+            <input className="form-control" id="zip" required="required" type="text" onChange={formik.handleChange} value={formik.values.zip} />
           </div>
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" htmlFor="state">Region</label>
-            <select className="form-control" id="state" onChange={handleChange}>
+            <label className="form-label" htmlFor="region">Region</label>
+            <select className="form-control" id="region" onChange={formik.handleChange} value={formik.values.region}>
               <option value="">Select Region</option>
               <option value="Luzon">Luzon</option>
               <option value="Visayas">Visayas</option>
@@ -54,8 +59,8 @@ function Form() {
           </div>
 
           <div className="col-sm-6 col-md-3">
-            <label className="form-label" for="country" required="required" onChange={handleChange}>Country</label>
-            <select className="form-check js-country form-control" id="country" required="required" name="country">
+            <label className="form-label" for="province" required="required" >Province</label>
+            <select className="form-check js-country form-control" id="province" required="required" name="province" onChange={formik.handleChange} value={formik.values.province}>
               <option value="">Select Province</option>
               <option value="Abra">Abra</option>
               <option value="Agusan del Norte">Agusan del Norte</option>
@@ -115,12 +120,12 @@ function Form() {
             </select>
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="phone" required="required" onChange={handleChange}>Telephone</label>
-            <input className="form-control" id="phone" required="required" type="text" />
+            <label className="form-label" for="phone" required="required" >Telephone</label>
+            <input className="form-control" id="phone" required="required" type="text" onChange={formik.handleChange} value={formik.values.phone} />
           </div>
           <div className="col-sm-6">
-            <label className="form-label" for="email" required="required" onChange={handleChange}>Email</label>
-            <input className="form-control" id="email" required="required" type="email" />
+            <label className="form-label" for="email" required="required" >Email</label>
+            <input className="form-control" id="email" required="required" type="email" onChange={formik.handleChange} value={formik.values.email} />
           </div>
           <div className="col-sm-12 text-center">
             <button className="btn btn-primary" type="submit"><i className="fas fa-save me-2"></i>Save changes</button>

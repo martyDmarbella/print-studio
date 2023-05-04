@@ -1,8 +1,10 @@
 import jaime from "../assets/images/jaime.jpg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBag, faUser, faMapMarker, faKey } from '@fortawesome/free-solid-svg-icons';
-import CustomerAddresses from "./CustomerAddresses";
 import Form from "./Form";
+import Form2 from "./Form2";
+import CustomerView from "./CustomerView";
+
+
+
 
 function CustomerAccount() {
   return (
@@ -55,52 +57,20 @@ function CustomerAccount() {
                 <h5>Jaime Yanoc</h5>
                 <p className="text-muted text-small">Cebu, Philippines</p>
               </div>
-
-              <nav className="list-group">
-                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-orders.html">
-                <span className="fw-normal text-sm text-dark py-1">
-                <FontAwesomeIcon icon={faShoppingBag} /> Orders</span></a>
-                <a className="active list-group-item list-group-item-action d-flex justify-content-between align-items-center rounded-0" href="customer-account.html" aria-current="true">
-                <span className="fw-normal text-sm py-1">
-                <FontAwesomeIcon icon={faUser} /> Profile</span></a><a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/customer-addresses">
-                <span className="fw-normal text-sm text-dark py-1">
-                <FontAwesomeIcon icon={faMapMarker} /> Addresses </span></a>
-                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="customer-login.html">
-                <span className="fw-normal text-sm text-dark py-1">
-                <FontAwesomeIcon icon={faKey} /> Log out</span></a>
-              </nav>
+              <CustomerView />
 
             </div>
             <div className="col-lg-8 col-xl-9">
               <div className="bg-light rounded-pill px-4 py-3 mb-5">
                 <h5 className="mb-0">Change password  </h5>
               </div>
-              <form className="mb-5">
-                <div className="row mb-3">
-                  <div className="col-sm-6">
-                    <label className="form-label" for="password_old">Old password</label>
-                    <input className="form-control" id="password_old" type="password" />
-                  </div>
-                </div>
-                <div className="row gy-3">
-                  <div className="col-sm-6">
-                    <label className="form-label" for="password_1">New password</label>
-                    <input className="form-control" id="password_1" type="password" />
-                  </div>
-                  <div className="col-sm-6">
-                    <label className="form-label" for="password_2">Retype new password</label>
-                    <input className="form-control" id="password_2" type="password" />
-                  </div>
-                  <div className="col-12 text-center">
-                    <button className="btn btn-primary" type="submit"><i className="fas fa-save me-2"></i>Change password</button>
-                  </div>
-                </div>
+              <Form2 />
 
-              </form>
+
               <div className="bg-light rounded-pill px-4 py-3 mb-5">
                 <h5 className="mb-0">Personal details</h5>
               </div>
-             <Form />
+              <Form />
             </div>
           </div>
         </div>

@@ -12,6 +12,7 @@ import Contact from '../pages/Contact';
 import CustomerAccount from '../pages/CustomerAccount';
 import CustomerAddresses from '../pages/CustomerAddresses';
 import Form from '../pages/Form';
+import Orders from '../pages/Orders';
 
 
 const Routers = () => {
@@ -27,6 +28,7 @@ const Routers = () => {
       <Route path='checkout' element={<Checkout />} />
       <Route path='/login' element={<Login />} />
       <Route path='signup' element={<Signup />} />
+      <Route path='/orders' element={<Orders />} />
       <Route path='/account' element={<CustomerAccount />} />
       <Route path='/form' element={<Form />} />
       <Route path='/customer-addresses' element={<CustomerAddresses />} />
