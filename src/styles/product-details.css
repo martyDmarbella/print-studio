@@ -36,7 +36,6 @@
 }
 
 .review_wrapper ul li span {
-  color: coral;
   font-weight: 600;
 }
 
@@ -77,7 +76,7 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
-  color: coral;
+  color: yellow;
 }
 
 .related_item {

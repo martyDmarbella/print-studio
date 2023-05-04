@@ -134,7 +134,7 @@ const products = [
 
   {
     id: "06",
-    productName: "One Piece Soro",
+    productName: "One Piece Zoro",
     imgUrl: mug02,
     category: "Mug",
     price: 150,
@@ -248,7 +248,7 @@ const products = [
 
   {
     id: "11",
-    productName: "Trifagar One Piece",
+    productName: "Trafalgar One Piece",
     imgUrl: jacket03,
     category: "Jacket",
     price: 899,
