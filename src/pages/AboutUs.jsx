@@ -54,10 +54,10 @@ const AboutUs = () => {
             <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 d-none d-sm-block">
-            <div className="about-icon ml-lg-0"><i className="fas fa-chart-line"></i></div>
+            <div className="about-icon ml-lg-0"><i className="fa-sharp fa-solid fa-chart-line fa-2xl" style={{color:"#008aff"}} ></i></div>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 text-end d-none d-sm-block">
-            <div className="about-icon mr-lg-0"><i className="far fa-user">                     </i></div>
+            <div className="about-icon mr-lg-0"><i class="fa-regular fa-user fa-2xl" style={{color:"#008aff"}} ></i></div>
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>Who we are</h2>
@@ -68,10 +68,10 @@ const AboutUs = () => {
             <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 d-none d-sm-block">
-            <div className="about-icon ml-lg-0"><i className="far fa-heart"></i></div>
+            <div className="about-icon ml-lg-0"><i class="fa-regular fa-heart fa-2xl" style={{color:"#008aff"}}></i></div>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 text-end d-none d-sm-block">
-            <div className="about-icon mr-lg-0"><i className="fa fa-truck-moving">                     </i></div>
+            <div className="about-icon mr-lg-0"><i class="fa-sharp fa-solid fa-truck-moving fa-2xl" style={{color:"#008aff"}}></i></div>
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>Fast delivery</h2>

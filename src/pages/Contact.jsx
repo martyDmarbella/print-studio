@@ -102,11 +102,10 @@ const Contact = () => {
               <p>I hope this message finds you well. I am writing to inquire about your data privacy policies. As a concerned individual, I value my personal information and want to ensure that it is protected. Can you please provide me with more information on how you handle and safeguard user data? Your prompt response would be greatly appreciated.</p>
               <p>Therefore, I would like to learn more about how you handle and safeguard user data, including any measures you have put in place to protect against data breaches or cyber attacks. Your prompt response to my request would be greatly appreciated, and would help me make an informed decision about using your services. </p>
               <ul className="list-inline">
-                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
-                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i className="fab fa-twitter"></i></a></li>
-                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i className="fab fa-instagram"></i></a></li>
-                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i className="fab fa-behance"></i></a></li>
-                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i className="fab fa-pinterest"></i></a></li>
+                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
+                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                <li className="list-inline-item mr-2"><a className="reset-anchor text-primary" href="#" target="_blank"><i class="fa-brands fa-pinterest fa-xl"></i></a></li>
               </ul>
             </div>
           </div>

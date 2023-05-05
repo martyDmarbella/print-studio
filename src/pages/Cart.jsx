@@ -1,32 +1,26 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Helmet from '../components/Helmet/Helmet';
-import CommonSection from '../components/UI/CommonSection';
 import { Container, Row, Col } from 'reactstrap';
 import { motion } from 'framer-motion';
+import { cartActions } from '../redux/slices/cartSlice';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const [updatedCartItems, setUpdatedCartItems] = useState(cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const dispatch = useDispatch();
 
   const handleRemoveItem = (index) => {
-    const newCartItems = [...updatedCartItems];
-    newCartItems.splice(index, 1);
-    setUpdatedCartItems(newCartItems);
+    dispatch(cartActions.removeItem(index));
   }
-
-  const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
-
- 
 
   return (
     <Helmet title='Cart'>
-      <CommonSection title='Shopping Cart' />
       <section>
         <Container>
           <Row>
             <Col lg='9'>
-              {updatedCartItems.length === 0 ? (
+              {cartItems.length === 0 ? (
                 <h2 className='fs-4 text-center'>No item added to the cart</h2>
               ) : (
                 <table className='table bordered'>
@@ -41,8 +35,8 @@ const Cart = () => {
                   </thead>
 
                   <tbody>
-                    {updatedCartItems.map((item, index) => {
-                      console.log(item.imgUrl); // log the item.imgUrl value to the console
+                    {cartItems.map((item, index) => {
+                      console.log(item.image); // log the item.image value to the console
                       return (
                         <tr key={index}>
                           <td>
@@ -52,22 +46,21 @@ const Cart = () => {
                           <td>₱{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>
-                            <i className="fa fa-trash" onClick={() => handleRemoveItem(item)}></i>
+                            <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
                           </td>
                         </tr>
                       )
                     })}
-
                   </tbody>
                 </table>
               )}
             </Col>
 
-            <Col lg='3'>           
+            <Col lg='3'>
               <div className='card'>
                 <div className='card-body'>
                   <h5 className='card-title'>Total Amount:</h5>
-                  <h6 className='card-subtitle mb-2 text-muted'>₱{totalAmount.toFixed(2)}</h6>
+                  <h6 className='card-subtitle mb-2 text-muted'>₱{Number(totalAmount).toFixed(2)}</h6>
                   <button className='btn btn-primary'>Proceed to Checkout</button>
                 </div>
               </div>
@@ -78,6 +71,5 @@ const Cart = () => {
     </Helmet>
   );
 };
-
 
 export default Cart;
