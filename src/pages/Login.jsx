@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from "formik";
 import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 
 const validationSchema = yup.object({
@@ -25,6 +26,10 @@ function Login() {
       console.log(values);
     }
   });
+  const navigate = useNavigate();
+  const navigateToCart = () => {
+    navigate('/cart');
+  };
 
   return (
     <>
@@ -48,7 +53,7 @@ function Login() {
                   <input type="checkbox" value="remember-me" name='remember_me' /> Remember me
                 </label>
               </div>
-              <button className="w-100 btn btn-lg btn-primary m-1" type="submit">Sign in</button>
+              <button className="w-100 btn btn-lg btn-primary m-1" type="submit" onClick={navigateToCart}>Sign in</button>
              
             </form>
             </main>
