@@ -31,7 +31,7 @@ const AboutUs = () => {
     <section className="py-5 bg-light">
       <div className="container py-4">
         <div className="row">
-          <div className="col-lg-9 order-2 order-lg-1">
+          <div className="col-lg-9 order-2 order-lg-1 mt-5">
             <h1>About us</h1>
           </div>
           <div className="col-lg-3 text-end order-1 order-lg-2">
@@ -51,7 +51,8 @@ const AboutUs = () => {
         <div className="row gy-5 align-items-center">
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>How it all began</h2>
-            <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+            <p className="text-muted fw-normal mb-0">Print Studio started as a small idea in the minds of a group of creative individuals who were passionate about design and print. It was born out of the desire to bring innovative and high-quality printing solutions to the market, and to make it accessible to everyone.
+            The journey began with a humble setup, where the team worked tirelessly to create a brand that stood for excellence and customer satisfaction. </p>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 d-none d-sm-block">
             <div className="about-icon ml-lg-0"><i className="fa-sharp fa-solid fa-chart-line fa-2xl" style={{color:"#008aff"}} ></i></div>
@@ -61,11 +62,11 @@ const AboutUs = () => {
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>Who we are</h2>
-            <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+            <p className="text-muted fw-normal mb-0">At Print Studio, we are a team of dedicated professionals who are passionate about design and printing. We believe that high-quality print products can make a significant impact on businesses and individuals alike, and we strive to provide our customers with the best possible printing solutions.</p>
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>We care</h2>
-            <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+            <p className="text-muted fw-normal mb-0">We care about our customers and the impact we have on the environment. We believe that businesses can thrive while also being socially and environmentally responsible, and we are committed to doing our part to make a positive impact on the world around us.</p>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 d-none d-sm-block">
             <div className="about-icon ml-lg-0"><i class="fa-regular fa-heart fa-2xl" style={{color:"#008aff"}}></i></div>
@@ -75,14 +76,14 @@ const AboutUs = () => {
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>Fast delivery</h2>
-            <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+            <p className="text-muted fw-normal mb-0">We understand that time is of the essence, especially when it comes to business. That's why we offer fast and reliable delivery options to ensure that our customers receive their print products in a timely manner.</p>
           </div>
           <div className="col-lg-8 col-sm-9 py-lg-4">
             <h2>Your security and privacy matters</h2>
-            <p className="text-muted fw-normal mb-0">As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+            <p className="text-muted fw-normal mb-0">We take the security and privacy of our customers very seriously. We understand that the information and data our customers share with us is sensitive and confidential, and we are committed to protecting it at all times.</p>
           </div>
           <div className="col-lg-4 col-sm-3 py-lg-4 d-none d-sm-block">
-            <div className="about-icon ml-lg-0"><i className="fas fa-shield-alt"></i></div>
+            <div className="about-icon ml-lg-0"><i class="fa-solid fa-shield-halved fa-2xl" style={{color:"#008aff"}}></i></div>
           </div>
         </div>
       </div>
@@ -115,13 +116,20 @@ const AboutUs = () => {
 
                                     <li><a href="#Soc" className="twitter">
                                         <i className="fa-brands fa-twitter fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="facebook">
-                                        <i className="fa-brands fa-facebook fa-lg"></i>
-                                    </a></li>
+                                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="instagram">
                                         <i className="fa-brands fa-instagram fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
+                                    <li><a href="#Soc" className="googleplus">
+                                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                                    </a>
+                                    </li>
 
                                     </ul>
                                 </div>
@@ -143,13 +151,20 @@ const AboutUs = () => {
 
                                     <li><a href="#Soc" className="twitter">
                                         <i className="fa-brands fa-twitter fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="facebook">
-                                        <i className="fa-brands fa-facebook fa-lg"></i>
-                                    </a></li>
+                                      <i class="fa-brands fa-facebook-f fa-lg"></i>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="instagram">
                                         <i className="fa-brands fa-instagram fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
+                                    <li><a href="#Soc" className="googleplus">
+                                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                                    </a>
+                                    </li>
 
                                     </ul>
                                 </div>
@@ -171,13 +186,20 @@ const AboutUs = () => {
 
                                     <li><a href="#Soc" className="twitter">
                                         <i className="fa-brands fa-twitter fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="facebook">
-                                        <i className="fa-brands fa-facebook fa-lg"></i>
-                                    </a></li>
+                                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                                    </a>
+                                    </li>
                                     <li><a href="#Soc" className="instagram">
                                         <i className="fa-brands fa-instagram fa-lg"></i>
-                                    </a></li>
+                                    </a>
+                                    </li>
+                                    <li><a href="#Soc" className="googleplus">
+                                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                                    </a>
+                                    </li>
 
                                     </ul>
                                 </div>
