@@ -15,7 +15,6 @@ const Cart = () => {
     setUpdatedCartItems(newCartItems);
   }
 
-  // calculate the total amount
   const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
  
@@ -58,13 +57,13 @@ const Cart = () => {
                         </tr>
                       )
                     })}
+
                   </tbody>
                 </table>
               )}
             </Col>
 
-            <Col lg='3'>
-              {/* display the total amount */}
+            <Col lg='3'>           
               <div className='card'>
                 <div className='card-body'>
                   <h5 className='card-title'>Total Amount:</h5>
