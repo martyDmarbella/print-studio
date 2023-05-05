@@ -1,8 +1,22 @@
 import jaime from "../assets/images/jaime.jpg"
 import CustomerView from "./CustomerView";
+import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
 
 
 function Orders() {
+
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const [updatedCartItems, setUpdatedCartItems] = useState(cartItems);
+
+  const handleRemoveItem = (index) => {
+    const newCartItems = [...updatedCartItems];
+    newCartItems.splice(index, 1);
+    setUpdatedCartItems(newCartItems);
+  }
+
+  // calculate the total amount
+  const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   
   return (
     <>
@@ -63,40 +77,32 @@ function Orders() {
               <div className="cart-inner">
                 <div className="bg-light rounded-pill px-4 py-3">
                   <div className="row fw-normal text-uppercase">
-                    <div className="col-6">Product</div>
+                    <div className="col-6">Image/Title</div>
                     <div className="col-2">Price</div>
-                    <div className="col-2">Quantity</div>
+                    <div className="col-2">Qty</div>
                     <div className="col-2 text-end">Total</div>
                   </div>
                 </div>
                 
-                <div className="p-4 border-bottom">
-                  <div className="row d-flex align-items-center bord">
+                <div className="p-4 border-bottom">{updatedCartItems.map((item, index) => {
+                      console.log(item.imgUrl); // log the item.imgUrl value to the console
+                      return (
+                        <div className="row d-flex align-items-center bord">
                     <div className="col-6">
-                      <div className="d-flex align-items-center"><img src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/shirt.0836aa05.jpg" style={{width: "60px"}}/>
+                      <div className="d-flex align-items-center"><img src={item.image} alt='cart-image' style={{width: "60px"}}/>
                         <div className="ms-3"><a href="detail.html">
-                            <h6 className="mb-0 text-dark">Loose Oversised Shirt</h6><span className="text-muted text-sm">Size: Large</span></a></div>
+                            <h6 className="mb-0 text-dark">{item.productName}</h6><span className="text-muted text-sm">Size: Large</span></a></div>
                       </div>
                     </div>
-                    <div className="col-2"><span>$65.00</span></div>
-                    <div className="col-2"><span>4</span></div>
-                    <div className="col-2 text-end"><span>$325.00</span></div>
+                    <div className="col-2"><span>₱{item.price}</span></div>
+                    <div className="col-2"><span>{item.quantity}</span></div>
+                    <div className="col-2 text-end"><span>₱{totalAmount.toFixed(2)}</span></div>
                   </div>
+                      )
+                    })}
+                  
                 </div>
                 
-                <div className="p-4 border-bottom">
-                  <div className="row d-flex align-items-center bord">
-                    <div className="col-6">
-                      <div className="d-flex align-items-center"><img src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/shirt-black.cbbb65a4.jpg" style={{width: "60px"}}/>
-                        <div className="ms-3"><a href="detail.html">
-                            <h6 className="mb-0 text-dark">Loose Oversised Shirt</h6><span className="text-muted text-sm">Size: Medium</span></a></div>
-                      </div>
-                    </div>
-                    <div className="col-2"><span>$55.00</span></div>
-                    <div className="col-2"><span>4</span></div>
-                    <div className="col-2 text-end"><span>$165.00</span></div>
-                  </div>
-                </div>
                 <div className="border-bottom py-3">
                   <div className="row">
                     <div className="col-md-4 col-6 ms-md-auto"><strong>Order subtotal</strong></div>

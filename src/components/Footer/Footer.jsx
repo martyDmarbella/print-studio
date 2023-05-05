@@ -5,10 +5,12 @@ import logo from '../../assets/images/logo/logo_white.svg';
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className='footer mb-0'>
+      
       <Container className='mb-0'>
         <Row>
           <Col lg='4' className='mb-4' md='6'>

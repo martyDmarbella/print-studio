@@ -39,6 +39,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
+
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -63,7 +64,7 @@ const Header = () => {
   
   const navigate = useNavigate();
   const navigateToCart = () => {
-    navigate('/cart');
+    navigate('cart');
   };
   const handleProfileClick = () => {
     navigate('/account');
@@ -124,5 +125,6 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;

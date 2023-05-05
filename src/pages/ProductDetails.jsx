@@ -38,8 +38,8 @@ const ProductDetails = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const reviewUserName = reviewUser.current.value;
-    const reviewUserMsg = reviewMsg.current.value;
+    const reviewUserName = reviewUser.current.values;
+    const reviewUserMsg = reviewMsg.current.values;
 
     const reviewObj = {
       userName: reviewUserName,

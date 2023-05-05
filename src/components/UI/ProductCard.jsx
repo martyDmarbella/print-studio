@@ -17,7 +17,7 @@ const ProductCard = ({ item }) => {
         id: item.id,
         productName: item.productName,
         price: item.price,
-        image: item.imgUrl,
+        imgUrl: item.imgUrl,
       })
     );
 
@@ -33,7 +33,7 @@ const ProductCard = ({ item }) => {
           <motion.img
             whileHover={{ scale: 0.9 }}
             src={item.imgUrl}
-            alt='arm-chair'
+            alt='Tshirt'
           />
         </div>
         <div className='p-2 product_info'>

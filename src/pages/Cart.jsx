@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
 import { Container, Row, Col } from 'reactstrap';
+import { motion } from 'framer-motion';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -16,6 +17,8 @@ const Cart = () => {
 
   // calculate the total amount
   const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+ 
 
   return (
     <Helmet title='Cart'>
@@ -34,7 +37,7 @@ const Cart = () => {
                       <th>Title</th>
                       <th>Price</th>
                       <th>Qty</th>
-                      <th>Delete</th>
+                      <motion.th whileTap={{ scale: 1.2 }}>Delete</motion.th>
                     </tr>
                   </thead>
 
@@ -44,13 +47,13 @@ const Cart = () => {
                       return (
                         <tr key={index}>
                           <td>
-                            <img src={item.image} alt='cart-image'/>
+                            <img src={item.image} alt='cart-image' style={{width:"50px", height:"50px"}}/>
                           </td>
                           <td>{item.productName}</td>
                           <td>₱{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>
-                            <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
+                            <i className="fa fa-trash" onClick={() => handleRemoveItem(item)}></i>
                           </td>
                         </tr>
                       )
@@ -76,5 +79,6 @@ const Cart = () => {
     </Helmet>
   );
 };
+
 
 export default Cart;

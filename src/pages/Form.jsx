@@ -1,5 +1,26 @@
 import React from "react";
 import { useFormik } from "formik";
+import * as yup from "yup";
+
+const validationSchema = yup.object({
+  firstName: yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  lastName: yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  street: yup.string().required('street is required'),
+  city: yup.string().required('street is required'),
+  zip: yup.string().required('street is required'),
+  region: yup.string().required('street is required'),
+  province: yup.string().required('street is required'),
+  phone: yup.string().required('street is required'),
+  email: yup.string().required('street is required'),
+});
+
+
 
 function Form() {
 
@@ -15,10 +36,11 @@ function Form() {
       phone: '',
       email: '',
     },
-    onSubmit: values =>{
-      console.log('Form data', values)
+    validationSchema,
+    onSubmit: (values) => {
+      console.log(values);
     }
-  })
+  });
 
   return (
     <>
@@ -42,7 +64,7 @@ function Form() {
           </div>
           <div className="col-sm-6 col-md-3">
             <label className="form-label" for="city" required="required">City</label>
-            <input className="form-control" id="city" required="required" type="text" onChange={formik.handleChange} value={formik.values.city}  />
+            <input className="form-control" id="city" required="required" type="text" onChange={formik.handleChange} value={formik.values.city} />
           </div>
           <div className="col-sm-6 col-md-3">
             <label className="form-label" for="zip" required="required">ZIP</label>
