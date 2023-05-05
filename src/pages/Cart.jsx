@@ -14,7 +14,6 @@ const Cart = () => {
     setUpdatedCartItems(newCartItems);
   }
 
-  // calculate the total amount
   const totalAmount = updatedCartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -39,29 +38,25 @@ const Cart = () => {
                   </thead>
 
                   <tbody>
-                    {updatedCartItems.map((item, index) => {
-                      console.log(item.imgUrl); // log the item.imgUrl value to the console
-                      return (
-                        <tr key={index}>
-                          <td>
-                            <img src={item.image} alt='cart-image'/>
-                          </td>
-                          <td>{item.productName}</td>
-                          <td>₱{item.price}</td>
-                          <td>{item.quantity}</td>
-                          <td>
-                            <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
-                          </td>
-                        </tr>
-                      )
-                    })}
+                    {updatedCartItems.map((item, index) => (
+                      <tr key={index}>
+                        <td>
+                          <img src={item.imgUrl} alt='product' />
+                        </td>
+                        <td>{item.productName}</td>
+                        <td>₱{item.price}</td>
+                        <td>{item.quantity}</td>
+                        <td>
+                          <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               )}
             </Col>
 
-            <Col lg='3'>
-              {/* display the total amount */}
+            <Col lg='3'>           
               <div className='card'>
                 <div className='card-body'>
                   <h5 className='card-title'>Total Amount:</h5>
