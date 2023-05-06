@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 import logo from '../../assets/images/logo/logo.svg';
 import userIcon from '../../assets/images/user-icon.png';
-
 import { Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

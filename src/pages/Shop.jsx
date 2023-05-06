@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import SortDropdown from '../components/UI/SortDropdown';
-
 import CommonSection from '../components/UI/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
 import '../styles/shop.css';
-
 import products from '../assets/data/products';
 import ProductList from '../components/UI/ProductList';
 

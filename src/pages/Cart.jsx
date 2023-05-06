@@ -42,7 +42,7 @@ const Cart = () => {
                       return (
                         <tr key={index}>
                           <td>
-                            <img src={item.image} alt='cart-image' style={{width:"50px", height:"50px"}}/>
+                            <img src={item.image} alt='' style={{width:"50px", height:"50px"}}/>
                           </td>
                           <td>{item.productName}</td>
                           <td>₱{item.price}</td>

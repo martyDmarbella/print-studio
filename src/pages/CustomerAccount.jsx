@@ -3,9 +3,6 @@ import Form from "./Form";
 import Form2 from "./Form2";
 import CustomerView from "./CustomerView";
 
-
-
-
 function CustomerAccount() {
   return (
     <>

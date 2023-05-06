@@ -9,7 +9,6 @@ import products from '../assets/data/products';
 import Services from '../services/Services';
 import ProductList from '../components/UI/ProductList';
 import Clock from '../components/UI/Clock';
-
 import counterImg from '../assets/images/counter-timer-img.gif';
 import jayson from "../assets/images/jayson.jpg"
 import jaime from "../assets/images/jaime.jpg"
