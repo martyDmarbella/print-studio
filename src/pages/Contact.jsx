@@ -1,6 +1,12 @@
+import Helmet from "../components/Helmet/Helmet"
+import CommonSection from '../components/UI/CommonSection';
+
+
 const Contact = () => {
   return (
     <>
+        <Helmet title='contact'>
+      <CommonSection title='Contact Us' />
 
       <div className="search-panel d-none" id="searchPanel">
         <div className="search-panel-inner p-4">
@@ -111,6 +117,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      </Helmet>
     </>
   );
 }

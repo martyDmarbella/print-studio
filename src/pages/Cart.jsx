@@ -4,6 +4,7 @@ import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { motion } from 'framer-motion';
 import { cartActions } from '../redux/slices/cartSlice';
+import CommonSection from '../components/UI/CommonSection';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -16,6 +17,7 @@ const Cart = () => {
 
   return (
     <Helmet title='Cart'>
+      <CommonSection title='Cart' />
       <section>
         <Container>
           <Row>

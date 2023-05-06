@@ -39,7 +39,6 @@ const Header = () => {
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
-
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -97,6 +96,10 @@ const Header = () => {
             </div>
 
             <div className='nav_icons'>
+              {/* <span className='fav_icon'>
+                <i class='ri-heart-line'></i>
+                <span className='badge'>2</span>
+              </span> */}
               <span className='cart_icon' onClick={navigateToCart}>
                 <i class='ri-shopping-bag-line'></i>
                 <span className='badge'>{totalQuantity}</span>

@@ -67,31 +67,6 @@ const Shop = () => {
     setProductsData(searchedProducts);
   };
 
-
-  // const handleSort = (e) => {
-  //   const sortValue = e.target.value;
-
-  //   if (sortOption === 'popularity') {
-  //     const sortedProducts = [...products].sort((a, b) => b.popularity - a.popularity);
-  //     setProductsData(sortedProducts);
-  //   }
-    
-  //   if (sortOption === 'high-to-low') {
-  //     const sortedProducts = [...products].sort((a, b) => b.price - a.price);
-  //     setProductsData(sortedProducts);
-  //   }
-    
-  //   if (sortOption === 'low-to-high') {
-  //     const sortedProducts = [...products].sort((a, b) => a.price - b.price);
-  //     setProductsData(sortedProducts);
-  //   }
-    
-  //   if (sortOption === 'top-rated') {
-  //     const sortedProducts = [...products].sort((a, b) => b.rating - a.rating);
-  //     setProductsData(sortedProducts);
-  //   }
-  // };
-
   const handleSort = (sortValue) => {
     setSortOption(sortValue);
 
