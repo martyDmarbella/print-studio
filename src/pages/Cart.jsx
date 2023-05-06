@@ -38,7 +38,7 @@ const Cart = () => {
 
                   <tbody>
                     {cartItems.map((item, index) => {
-                      console.log(item.image); // log the item.image value to the console
+                      console.log(item.image);
                       return (
                         <tr key={index}>
                           <td>
