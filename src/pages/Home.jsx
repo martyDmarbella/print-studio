@@ -85,7 +85,7 @@ const Home = () => {
       <section className='trending_products'>
         <Container>
           <Row>
-            <Col lg='12' className='text-center'>
+            <Col lg='12' className='text-center mb-5'>
               <h2 className='section_title'>Trending Products</h2>
             </Col>
             <ProductList data={trendingProducts} />
@@ -96,7 +96,7 @@ const Home = () => {
       <section className='best_sales'>
         <Container>
           <Row>
-            <Col lg='12' className='text-center'>
+            <Col lg='12' className='text-center mb-5'>
               <h2 className='section_title'>Best Sales</h2>
             </Col>
             <ProductList data={bestSalesProducts} />
@@ -178,14 +178,21 @@ const Home = () => {
                     <ul className="team-icon">
 
                     <li><a href="#Soc" className="twitter">
-                        <i class="fa-brands fa-twitter fa-lg"></i>
-                    </a></li>
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                        </a>
+                    </li>
                     <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook fa-lg"></i>
-                    </a></li>
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                        </a>
+                        </li>
                     <li><a href="#Soc" className="instagram">
-                        <i class="fa-brands fa-instagram fa-lg"></i>
-                    </a></li>
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                        </a>
+                    </li>
+                    <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                        </a>
+                    </li>
 
                     </ul>
                 </div>
@@ -206,14 +213,21 @@ const Home = () => {
                     <ul className="team-icon">
 
                     <li><a href="#Soc" className="twitter">
-                        <i class="fa-brands fa-twitter fa-lg"></i>
-                    </a></li>
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                        </a>
+                    </li>
                     <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook fa-lg"></i>
-                    </a></li>
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                        </a>
+                        </li>
                     <li><a href="#Soc" className="instagram">
-                        <i class="fa-brands fa-instagram fa-lg"></i>
-                    </a></li>
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                        </a>
+                    </li>
+                    <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                        </a>
+                    </li>
 
                     </ul>
                 </div>
@@ -232,17 +246,24 @@ const Home = () => {
                         passionate about creating effective and efficient web solutions for clients.</p>
 
                     <ul className="team-icon">
-
+   
                     <li><a href="#Soc" className="twitter">
-                        <i class="fa-brands fa-twitter fa-lg"></i>
-                    </a></li>
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                        </a>
+                    </li>
                     <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook fa-lg"></i>
-                    </a></li>
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                        </a>
+                        </li>
                     <li><a href="#Soc" className="instagram">
-                        <i class="fa-brands fa-instagram fa-lg"></i>
-                    </a></li>
-
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                        </a>
+                    </li>
+                    <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                        </a>
+                    </li>
+               
                     </ul>
                 </div>
 
