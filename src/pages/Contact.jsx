@@ -33,8 +33,8 @@ const Contact = () => {
             <div className="col-lg-9 order-2 order-lg-1">
               <h1>Contact</h1>
               <p className="mt-2">
-                Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am
-                he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.
+                We're here to help! If you have any questions, comments, or concerns, please feel free to get in touch with us.
+                .Our team is dedicated to providing you with excellent service and support. We aim to respond to all inquiries as soon as possible, so please don't hesitate to reach out to us.
               </p>
             </div>
             <div className="col-lg-3 text-end order-1 order-lg-2">
@@ -49,7 +49,10 @@ const Contact = () => {
         </div>
         <div className="container text-dark">
           <h2>Are you curious about something?</h2>
-          <p>Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+          <p>
+          Have a question or just feeling curious? We're here to help! Our team is always happy to provide you with more information about our services, products, or anything else you're curious about.
+          We're passionate about what we do and love to share our knowledge with others. So whether you're wondering about the latest printing techniques or just want to know more about our team, we're here to help!
+          </p>
         </div>
         <div className="container py-5">
           <div className="row">
@@ -61,7 +64,7 @@ const Contact = () => {
             <div className="col-md-4">
               <i className="fas fa-phone-alt fa-2x mb-4 text-primary"></i>
               <h3>Call center</h3>
-              <p>This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
+              <p>This number is toll-free if calling from the Philippines. Otherwise, we advise you to use the electronic form of communication for faster and more convenient service.</p>
               <p><strong>020-800-456-747</strong></p>
             </div>
             <div className="col-md-4">
