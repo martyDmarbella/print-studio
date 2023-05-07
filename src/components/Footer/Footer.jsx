@@ -81,7 +81,7 @@ const Footer = () => {
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span>
                     <i class='ri-map-pin-line'></i>
-                    <p>Located at Bgc</p>
+                    <p>Located at Bgc, Taguig</p>
                   </span>
                 </ListGroupItem>
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                   <span>
                     <i class='ri-mail-line'></i>
-                    <p>marbella.tino@gmail.com</p>
+                    <p>PrintStudio@gmail.com</p>
                   </span>
                 </ListGroupItem>
               </ListGroup>
@@ -101,7 +101,7 @@ const Footer = () => {
           </Col>
           <Col lg='12'>
             <p className='footer_copyright'>
-              Copyright {year} developed by Jayson Herrere, Marty D. Marbella & Jaime Yanoc.
+              Copyright {year} developed by Jayson Herrera, Marty D. Marbella, Jaime Yanoc and Iris Raymundo .
               All rights reserved.
             </p>
           </Col>

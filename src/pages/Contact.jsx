@@ -39,10 +39,10 @@ const Contact = () => {
             </div>
             <div className="col-lg-3 text-end order-1 order-lg-2">
               <nav aria-label="breadcrumb">
-                <ol className="breadcrumb py-4 justify-content-lg-end mb-0">
+                {/* <ol className="breadcrumb py-4 justify-content-lg-end mb-0">
                   <li className="breadcrumb-item"><a href="index.html">Home</a></li>
                   <li className="breadcrumb-item active">Contact</li>
-                </ol>
+                </ol> */}
               </nav>
             </div>
           </div>

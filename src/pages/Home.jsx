@@ -165,116 +165,48 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="row mt-5">
-              <div className="col-sm-3">
-                <div className="card text-center">
-                  <img src={jayson} className="rounded-pill mx-auto d-block mt-3" alt="image1" style={{ width: '100px' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Jayson Herrera</h5>
-                    <p className="card-text">Team Leader Web Developer
-                    Jayson as a leader and web developer at PrintStudio. With over 10 years of experience in the printing and web development, Jayson is a highly skilled expert who is passionate about delivering exceptional results to his clients.</p>
-                    <ul className="team-icon me-4">
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
-                    </ul>
+            <div className="flip-card-container">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src={jayson} alt="Avatar" style={{ width: "100%" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h3>Jayson Herrera</h3>
+                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
-                <div className="card text-center">
-                  <img src={jaime} className="rounded-pill mx-auto d-block mt-3" alt="image2" style={{ width: '100px' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Jaime Mondares Yanoc</h5>
-                    <p className="card-text">Web Developer Graphic Design
-                    Jaime a talented web developer and graphic designer at PrintStudio. With over 10 years of experience in the industry, Jaime has a keen eye for design and a passion for creating beautiful, functional websites that meet his clients' needs.</p>
-                    <ul className="team-icon me-4">
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
-                    </ul>
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src={jaime} alt="Avatar" style={{ width: "100%" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h3>Jaime Yanoc</h3>
+                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
-                <div className="card text-center">
-                  <img src={marty} className="rounded-pill mx-auto d-block mt-3" alt="image3" style={{ width: '100px' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Marty Dy-liacco Marbella</h5>
-                    <p className="card-text">Marty is a highly experienced and skilled web developer and consultant with over 10 years of industry experience. He brings his expertise to help clients create effective and efficient web 
-                    solutions.He strives to provide the best possible outcomes for his clients. </p>
-                    <ul className="team-icon me-4">
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
-                    </ul>
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src={marty} alt="Avatar" style={{ width: "100%" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h3>Marty D. Marbella</h3>
+                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
-                <div className="card text-center">
-                  <img src={iris} className="rounded-pill mx-auto d-block mt-3" alt="image4" style={{ width: '100px' }} />
-                  <div className="card-body">
-                    <h5 className="card-title">Iris Raymundo</h5>
-                    <p className="card-text">Web Developer and Designer
-                    Iris Raymundo is a beautiful lady web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly websites that meet the specific needs of clients.</p>
-                    <ul className="team-icon me-4">
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
-                    </ul>
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src={iris} alt="Avatar" style={{ width: "100%" }} />
+                  </div>
+                  <div className="flip-card-back">
+                    <h3>Iris Raymundo</h3>
+                    <h5>Web Developer</h5>
                   </div>
                 </div>
               </div>

@@ -82,7 +82,7 @@ const AboutUs = () => {
 
             <div className="col-md-12 text-center">
               <h2 className="section-title">
-                The Team Behind Print Studio
+                Meet the Developers
               </h2>
               <p className="section-subtitle">
                 PrintStudio is a team of passionate and talented individuals dedicated to providing high-quality printing solutions to clients across various industries.
