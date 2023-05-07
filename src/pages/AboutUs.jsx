@@ -2,6 +2,7 @@ import React from "react";
 import jayson from "../assets/images/jayson.jpg"
 import jaime from "../assets/images/jaime.jpg"
 import marty from "../assets/images/marty.jpg"
+import iris from "../assets/images/iris.jpg"
 import CommonSection from '../components/UI/CommonSection';
 import Helmet from '../components/Helmet/Helmet';
 
@@ -88,41 +89,41 @@ const AboutUs = () => {
                 </p>
               </div>
 
-              <div className="col-sm-6 col-md-4">
+              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
                 <div className="team-item">
-
                   <img src={jayson} className="team-img" alt="pic" />
                   <h3>Jayson Herrera</h3>
                   <div className="team-info">
                     <p>Leader Web Developer Print of Studio</p>
-                    <p>Jayson leader and web developer at PrintStudio. With over 10 years of experience in the printing and web development, Jayson is a highly skilled expert
-                      who is passionate about delivering exceptional results to his clients.</p>
-
+                    <p>Jayson leader and web developer at PrintStudio. With over 10 years of experience in the printing and web development, Jayson is a highly skilled expert who is passionate about delivering exceptional results to his clients.</p>
                     <ul className="team-icon">
-
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
+                      <li>
+                        <a href="#Soc" className="twitter">
+                          <i className="fa-brands fa-twitter fa-lg"></i>
+                        </a>
                       </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
+                      <li>
+                        <a href="#Soc" className="facebook">
+                          <i class="fa-brands fa-facebook-f fa-lg"></i>
+                        </a>
                       </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
+                      <li>
+                        <a href="#Soc" className="instagram">
+                          <i className="fa-brands fa-instagram fa-lg"></i>
+                        </a>
                       </li>
-                      <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
+                      <li>
+                        <a href="#Soc" className="googleplus">
+                          <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                        </a>
                       </li>
-
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div className="col-sm-6 col-md-4">
+
+              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
                 <div className="team-item">
 
                   <img src={jaime} className="team-img" alt="pic" />
@@ -157,7 +158,7 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              <div className="col-sm-6 col-md-4">
+              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
                 <div className="team-item">
 
                   <img src={marty} className="team-img" alt="pic" />
@@ -166,6 +167,41 @@ const AboutUs = () => {
                     <p>Web Developer and Consultant</p>
                     <p> Marty a web developer and consultant at Print Studio. With over 200 years of experience in web development and consulting, a skilled expert who is
                       passionate about creating effective and efficient web solutions for clients.</p>
+
+                    <ul className="team-icon">
+
+                      <li><a href="#Soc" className="twitter">
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="facebook">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="instagram">
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                      </a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
+                <div className="team-item">
+
+                  <img src={iris} className="team-img" alt="pic" />
+                  <h3>Iris Raymundo</h3>
+                  <div className="team-info">
+                    <p>Web Developer</p>
+                    <p>Iris Raymundo is a beautiful lady web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly 
+                      websites that meet the specific needs of clients.</p>
 
                     <ul className="team-icon">
 
