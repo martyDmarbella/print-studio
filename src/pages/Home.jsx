@@ -52,262 +52,237 @@ const Home = () => {
   }, []);
   return (
     <>
-    <Helmet title={'Home'}>
-      <section className='hero_section'>
-        <Container>
-          <Row>
-            <Col lg='4' md='4'>
-              <div className='hero_content'>
-                <p className='hero_subtitle'>Print Studio {year}</p>
-                <h2>High-quality solutions for all your printing needs!</h2>
-                <p>
-                  Welcome to our Print Studio, where creativity meets technology. Our team of experts is dedicated to 
-                  providing high-quality printing services that exceed your expectations. From graphic design to 
-                  large-format printing, we offer a wide range of solutions to suit your needs. Let us bring your 
-                  ideas to life and make your vision a reality.
-                </p>
+      <Helmet title={'Home'}>
+        <section className='hero_section'>
+          <Container>
+            <Row>
+              <Col lg='4' md='4'>
+                <div className='hero_content'>
+                  <p className='hero_subtitle'>Print Studio {year}</p>
+                  <h2>High-quality solutions for all your printing needs!</h2>
+                  <p>
+                    Welcome to our Print Studio, where creativity meets technology. Our team of experts is dedicated to
+                    providing high-quality printing services that exceed your expectations. From graphic design to
+                    large-format printing, we offer a wide range of solutions to suit your needs. Let us bring your
+                    ideas to life and make your vision a reality.
+                  </p>
 
-                <motion.button whileTap={{ scale: 1.2 }} className='shop_btn'>
-                  <Link to='/shop'>SHOP NOW</Link>
+                  <motion.button whileTap={{ scale: 1.2 }} className='shop_btn'>
+                    <Link to='/shop'>SHOP NOW</Link>
+                  </motion.button>
+                </div>
+              </Col>
+              <Col lg='8' md='8'>
+                <div className='hero_img'>
+                  <img src={heroImg} alt='hero-banner' />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <Services />
+        <section className='trending_products'>
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>Trending Products</h2>
+              </Col>
+              <ProductList data={trendingProducts} />
+            </Row>
+          </Container>
+        </section>
+
+        <section className='best_sales'>
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>Best Sales</h2>
+              </Col>
+              <ProductList data={bestSalesProducts} />
+            </Row>
+          </Container>
+        </section>
+
+        <section className='timer_count'>
+          <Container>
+            <Row>
+              <Col lg='6' md='12' className='count_down-col'>
+                <div className='clock_top-content'>
+                  <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
+                  <h3 className='text-white fs-5 mb-3'>Quality Customise Jersey</h3>
+                </div>
+                <Clock />
+
+                <motion.button
+                  whileTap={{ scale: 1.2 }}
+                  className='shop_btn store_btn'
+                >
+                  <Link to='/shop'>Visit Store</Link>
                 </motion.button>
-              </div>
-            </Col>
-            <Col lg='8' md='8'>
-              <div className='hero_img'>
-                <img src={heroImg} alt='hero-banner' />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+              </Col>
+              <Col lg='6' md='12' className='text-end counter_img'>
+                <img src={counterImg} alt='sale_jersey' />
+              </Col>
+            </Row>
+          </Container>
+        </section>
 
-      <Services />
-      <section className='trending_products'>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2 className='section_title'>Trending Products</h2>
-            </Col>
-            <ProductList data={trendingProducts} />
-          </Row>
-        </Container>
-      </section>
+        <section className='new_arrivals'>
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>New Arrivals</h2>
+              </Col>
+              <ProductList data={capProducts} />
+              <ProductList data={jacketProducts} />
+            </Row>
+          </Container>
+        </section>
 
-      <section className='best_sales'>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2 className='section_title'>Best Sales</h2>
-            </Col>
-            <ProductList data={bestSalesProducts} />
-          </Row>
-        </Container>
-      </section>
+        <section className='popular_category'>
+          <Container>
+            <Row>
+              <Col lg='12' className='text-center mb-5'>
+                <h2 className='section_title'>Popular in Category</h2>
+              </Col>
+              <ProductList data={popularProducts} />
+            </Row>
+          </Container>
+        </section>
+      </Helmet>
 
-      <section className='timer_count'>
-        <Container>
-          <Row>
-            <Col lg='6' md='12' className='count_down-col'>
-              <div className='clock_top-content'>
-                <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
-                <h3 className='text-white fs-5 mb-3'>Quality Customise Jersey</h3>
-              </div>
-              <Clock />
+      <section className="section-white">
+        <div className="container">
+          <div className="row">
 
-              <motion.button
-                whileTap={{ scale: 1.2 }}
-                className='shop_btn store_btn'
-              >
-                <Link to='/shop'>Visit Store</Link>
-              </motion.button>
-            </Col>
-            <Col lg='6' md='12' className='text-end counter_img'>
-              <img src={counterImg} alt='sale_jersey' />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <section className='new_arrivals'>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2 className='section_title'>New Arrivals</h2>
-            </Col>
-            <ProductList data={capProducts} />
-            <ProductList data={jacketProducts} />
-          </Row>
-        </Container>
-      </section>
-
-      <section className='popular_category'>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2 className='section_title'>Popular in Category</h2>
-            </Col>
-            <ProductList data={popularProducts} />
-          </Row>
-        </Container>
-      </section>
-    </Helmet>
-
-<section className="section-white">
-<div className="container">
-    <div className="row">
-
-        <div className="col-md-12 text-center">
-            <h2 className="section-title">
+            <div className="col-md-12 text-center">
+              <h2 className="section-title">
                 The Team Behind Print Studio
-            </h2>
-            <p className="section-subtitle">
+              </h2>
+              <p className="section-subtitle">
                 PrintStudio is a team of passionate and talented individuals dedicated to providing high-quality printing solutions to clients across various industries.
-            </p>
+              </p>
+            </div>
+
+            <div className="row mt-5">
+              <div className="col-sm-3">
+                <div className="card text-center">
+                  <img src={jayson} className="rounded-pill mx-auto d-block mt-3" alt="image1" style={{ width: '100px' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Jayson Herrera</h5>
+                    <p className="card-text">Team Leader Web Developer
+                    Jayson as a leader and web developer at PrintStudio. With over 10 years of experience in the printing and web development, Jayson is a highly skilled expert who is passionate about delivering exceptional results to his clients.</p>
+                    <ul className="team-icon me-4">
+                      <li><a href="#Soc" className="twitter">
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="facebook">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="instagram">
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      </li>
+                      {/* <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                      </a>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card text-center">
+                  <img src={jaime} className="rounded-pill mx-auto d-block mt-3" alt="image2" style={{ width: '100px' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Jaime Mondares Yanoc</h5>
+                    <p className="card-text">Web Developer Graphic Design
+                    Jaime a talented web developer and graphic designer at PrintStudio. With over 10 years of experience in the industry, Jaime has a keen eye for design and a passion for creating beautiful, functional websites that meet his clients' needs.</p>
+                    <ul className="team-icon me-4">
+                      <li><a href="#Soc" className="twitter">
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="facebook">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="instagram">
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      </li>
+                      {/* <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                      </a>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card text-center">
+                  <img src={marty} className="rounded-pill mx-auto d-block mt-3" alt="image3" style={{ width: '100px' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Marty Dy-liacco Marbella</h5>
+                    <p className="card-text">Marty is a highly experienced and skilled web developer and consultant with over 10 years of industry experience. He brings his expertise to help clients create effective and efficient web 
+                    solutions.He strives to provide the best possible outcomes for his clients. </p>
+                    <ul className="team-icon me-4">
+                      <li><a href="#Soc" className="twitter">
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="facebook">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="instagram">
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      </li>
+                      {/* <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                      </a>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card text-center">
+                  <img src={iris} className="rounded-pill mx-auto d-block mt-3" alt="image4" style={{ width: '100px' }} />
+                  <div className="card-body">
+                    <h5 className="card-title">Iris Raymundo</h5>
+                    <p className="card-text">Web Developer and Designer
+                    Iris Raymundo is a beautiful lady web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly websites that meet the specific needs of clients.</p>
+                    <ul className="team-icon me-4">
+                      <li><a href="#Soc" className="twitter">
+                        <i className="fa-brands fa-twitter fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="facebook">
+                        <i class="fa-brands fa-facebook-f fa-lg"></i>
+                      </a>
+                      </li>
+                      <li><a href="#Soc" className="instagram">
+                        <i className="fa-brands fa-instagram fa-lg"></i>
+                      </a>
+                      </li>
+                      {/* <li><a href="#Soc" className="googleplus">
+                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
+                      </a>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
-                <div className="team-item">
-                  <img src={jayson} className="team-img" alt="pic" />
-                  <h3>Jayson Herrera</h3>
-                  <div className="team-info">
-                    <p>Leader Web Developer Print of Studio</p>
-                    <p>Jayson leader and web developer at PrintStudio. With over 10 years of experience in the printing and web development, Jayson is a highly skilled expert who is passionate about delivering exceptional results to his clients.</p>
-                    <ul className="team-icon">
-                      <li>
-                        <a href="#Soc" className="twitter">
-                          <i className="fa-brands fa-twitter fa-lg"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#Soc" className="facebook">
-                          <i class="fa-brands fa-facebook-f fa-lg"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#Soc" className="instagram">
-                          <i className="fa-brands fa-instagram fa-lg"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#Soc" className="googleplus">
-                          <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-
-              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
-                <div className="team-item">
-
-                  <img src={jaime} className="team-img" alt="pic" />
-                  <h3>Jaime Mondares Yanoc</h3>
-                  <div className="team-info">
-                    <p>Web Developer Graphic Design</p>
-                    <p>Jaime a talented web developer and graphic designer at PrintStudio. With over 10 years of experience in the industry, Jaime has a keen eye for design and a passion for creating beautiful,
-                      functional websites that meet his clients' needs.</p>
-
-                    <ul className="team-icon">
-
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li>
-
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
-                <div className="team-item">
-
-                  <img src={marty} className="team-img" alt="pic" />
-                  <h3>Marty Dy-liacco Marbella</h3>
-                  <div className="team-info">
-                    <p>Web Developer and Consultant</p>
-                    <p> Marty a web developer and consultant at Print Studio. With over 200 years of experience in web development and consulting, a skilled expert who is
-                      passionate about creating effective and efficient web solutions for clients.</p>
-
-                    <ul className="team-icon">
-
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li>
-
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-4" style={{ width: '25%', height: '20%' }}>
-                <div className="team-item">
-
-                  <img src={iris} className="team-img" alt="pic" />
-                  <h3>Iris Raymundo</h3>
-                  <div className="team-info">
-                    <p>Web Developer</p>
-                    <p>Iris Raymundo is a beautiful lady web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly 
-                      websites that meet the specific needs of clients.</p>
-
-                    <ul className="team-icon">
-
-                      <li><a href="#Soc" className="twitter">
-                        <i className="fa-brands fa-twitter fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="facebook">
-                        <i class="fa-brands fa-facebook-f fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="instagram">
-                        <i className="fa-brands fa-instagram fa-lg"></i>
-                      </a>
-                      </li>
-                      <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li>
-
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-
-    </div>
-</div>
-</section>
-</>
+      </section>
+    </>
   );
 };
 

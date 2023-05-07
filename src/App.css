@@ -173,14 +173,15 @@ ul.team-icon li a.googleplus{
   background-color: #f86a27;
 }
 
-.team-icon li a:hover {
-  color: #dedede;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+.card:hover {
+  background-color: #4099ff;
 }
+
+.card:hover h5,
+.card:hover p {
+  color: #fff;
+}
+
 
 @media only screen and (max-width:768px) {
   section {
