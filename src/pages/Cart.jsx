@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { motion } from 'framer-motion';
 import { cartActions } from '../redux/slices/cartSlice';
 import CommonSection from '../components/UI/CommonSection';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -14,6 +15,12 @@ const Cart = () => {
   const handleRemoveItem = (index) => {
     dispatch(cartActions.removeItem(index));
   }
+
+  const navigate = useNavigate();
+  const navigateToCheckOut = () => {
+    navigate('/checkout');
+  };
+
 
   return (
     <Helmet title='Cart'>
@@ -63,7 +70,7 @@ const Cart = () => {
                 <div className='card-body'>
                   <h5 className='card-title'>Total Amount:</h5>
                   <h6 className='card-subtitle mb-2 text-muted'>₱{Number(totalAmount).toFixed(2)}</h6>
-                  <button className='btn btn-primary'>Proceed to Checkout</button>
+                  <button className='btn btn-primary' onClick={navigateToCheckOut}>Proceed to Checkout</button>
                 </div>
               </div>
             </Col>
