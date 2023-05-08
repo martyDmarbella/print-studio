@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
+import { cartActions } from '../redux/slices/cartSlice';
+
 
 
 const OrderConfirmation = () => {
@@ -12,6 +14,7 @@ const OrderConfirmation = () => {
     const subtotal = totalAmount + 40;
     const current = new Date();
     const current1 = new Date();
+    const totalQuantity = useSelector((state) => state.cart.totalQuantity);
     current.setDate(current.getDate() + 2);
     current1.setDate(current1.getDate() + 3);
 
@@ -20,6 +23,15 @@ const OrderConfirmation = () => {
         navigate('/shop');
     };
 
+    const shopMore = ()=>{
+        handleRemoveFromCart();
+        navigateToShop();
+     }
+
+     const dispatch = useDispatch();
+     const handleRemoveFromCart = (index) => {
+       dispatch(cartActions.clearCart(index));
+     }
 
     return (
         <>
@@ -34,7 +46,7 @@ const OrderConfirmation = () => {
                         </div>
                         <Row>
                             <Col  className="d-flex align-items-center justify-content-evenly">
-                                <p className="fw-bold fs-4"> Est: {current.toDateString()} - {current1.toDateString()}</p>
+                                <p className="fw-bold fs-5"> Est: {current.toDateString()} - {current1.toDateString()}</p>
                             </Col>
                             <Col >
                                 <ul className="list-group list-group-horizontal">
@@ -49,11 +61,12 @@ const OrderConfirmation = () => {
                             </Col>
 
                         </Row>
-                        <Row className="bg-light p-4 "style={{margin:"0 0px"}} >
+                        <Row className="bg-light p-4 "style={{margin:"10px 0px"}} >
                             <Col>
-                                <div className='text-center'><h5>Order Summary</h5></div>
+                                <div className='text-center'><h5>Order Summary:</h5></div>
                             </Col>
                             <Col><p className="fs-4 fw-bold text-center">P{subtotal}</p></Col>
+                            <Col><p className="fs-4 fw-bold text-center">Qty:{totalQuantity}</p></Col>
                             <Col>
                                 <p>
                                     <a data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -111,7 +124,7 @@ const OrderConfirmation = () => {
                             </div>
                         </div>
                         <div>
-                            <button className='btn btn-primary my-3 d-flex mx-auto' onClick={navigateToShop} >Shop More</button>
+                            <button className='btn btn-primary my-3 d-flex mx-auto' onClick={shopMore} >Shop More</button>
                         </div>
                     </Container>
                 </section>

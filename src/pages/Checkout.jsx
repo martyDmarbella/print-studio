@@ -14,11 +14,15 @@ const Checkout = () => {
   const subtotal = totalAmount + 40;
 
   const navigate = useNavigate();
-  const navigateToOrderConfrimation = () => {
+  // const navigateToOrderConfrimation = () => {
+  //   navigate('/order-confirmation');
+  //   preventDefault();)
+  // };
+
+  const formHandler = (e) => {
+    e.preventDefault();
     navigate('/order-confirmation');
-  };
-
-
+  }
   return (
     <Helmet title='Checkout'>
       <CommonSection title='Checkout' />
@@ -74,7 +78,7 @@ const Checkout = () => {
 
             </Col>
             <Col lg="4" className="border" >
-              <form>
+              <form onSubmit={formHandler}>
               <div>
                 <h5 className="py-3 ">Payment Section</h5>
                 <div className='border rounded-2 py-4 px-3 mt-1' >
@@ -103,12 +107,12 @@ const Checkout = () => {
                 </div>
               </div>
               <div className="border-top mt-3">
-                <h5 className="py-3 ">Order Summary</h5>
+                <h5 className="py-3 ">Order Summary:</h5>
                 <div className='d-flex justify-content-between'><span>Subtotal</span> <span>P{Number(totalAmount).toFixed(2)}</span></div>
                 <div className='d-flex justify-content-between'><span className="pb-2">Shipping fee</span> <span>P40</span></div>
               </div>
               <div className='d-flex justify-content-between border-top'><span className="fw-bold fs-5">Total</span><span className="fw-bold fs-5">P{Number(subtotal).toFixed(2)}</span></div>
-              <button className='btn btn-primary my-3 d-flex mx-auto' onClick={navigateToOrderConfrimation} >Place Order</button>
+              <button className='btn btn-primary my-3 d-flex mx-auto'  >Place Order</button>
             </form>
             </Col>
           </Row>
@@ -116,7 +120,7 @@ const Checkout = () => {
       </section>
     </Helmet>
   );
-};
 
 
+                  };
 export default Checkout;
