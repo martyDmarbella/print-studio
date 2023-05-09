@@ -1,32 +1,9 @@
-import tshirt01 from "../images/tshirt01.jpg";
-import tshirt02 from "../images/tshirt02.jpg";
-import tshirt03 from "../images/tshirt03.jpg";
-import tshirt04 from "../images/tshirt04.jpg";
-
-import mug01 from "../images/mug01.jpg";
-import mug02 from "../images/mug02.jpg";
-import mug03 from "../images/mug03.jpg";
-import mug04 from "../images/mug04.jpg";
-
-import jacket01 from "../images/jacket01.jpg";
-import jacket02 from "../images/jacket02.jpg";
-import jacket03 from "../images/jacket03.jpg";
-import jacket04 from "../images/jacket04.jpg";
-
-import jersey01 from "../images/jersey01.jpg";
-import jersey02 from "../images/jersey02.jpg";
-import jersey03 from "../images/jersey03.jpg";
-import jersey04 from "../images/jersey04.jpg";
-import cap01 from "../images/cap01.jpg"
-import cap02 from "../images/cap02.jpg"
-import cap03 from "../images/cap03.jpg"
-import cap04 from "../images/cap04.jpg"
 
 const products = [
   {
     id: "01",
     productName: "Wokong Robot ",
-    imgUrl: tshirt01,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/tshirt01.jpg',
     category: "Tshirt",
     price: 400,
     shortDesc:
@@ -45,7 +22,7 @@ const products = [
   {
     id: "02",
     productName: "Astronaut",
-    imgUrl: tshirt02,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/tshirt02.jpg',
     category: "Tshirt",
     price: 353,
     shortDesc:
@@ -68,7 +45,7 @@ const products = [
   {
     id: "03",
     productName: "MotoBots",
-    imgUrl: tshirt03,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/tshirt03.jpg',
     category: "Tshirt",
     price: 473,
     shortDesc:
@@ -90,7 +67,7 @@ const products = [
   {
     id: "04",
     productName: "Berserker",
-    imgUrl: tshirt04,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/tshirt04.jpg',
     category: "Tshirt",
     price: 253,
     shortDesc:
@@ -112,7 +89,7 @@ const products = [
   {
     id: "05",
     productName: "One Piece Sabo",
-    imgUrl: mug01,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/mug01.jpg',
     category: "Mug",
     price: 150,
     shortDesc:
@@ -135,7 +112,7 @@ const products = [
   {
     id: "06",
     productName: "One Piece Zoro",
-    imgUrl: mug02,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/mug02.jpg',
     category: "Mug",
     price: 150,
     shortDesc:
@@ -158,7 +135,7 @@ const products = [
   {
     id: "07",
     productName: "Luffy One Piece",
-    imgUrl: mug03,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/mug03.jpg',
     category: "Mug",
     price: 150,
     shortDesc:
@@ -180,7 +157,7 @@ const products = [
   {
     id: "08",
     productName: "Ace One Piece",
-    imgUrl: mug04,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/mug04.jpg',
     category: "Mug",
     price: 150,
     shortDesc:
@@ -203,7 +180,7 @@ const products = [
   {
     id: "09",
     productName: "Kidd One Piece",
-    imgUrl: jacket01,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jacket01.jpg',
     category: "Jacket",
     price: 899,
     shortDesc:
@@ -226,7 +203,7 @@ const products = [
   {
     id: "10",
     productName: "Luffy One Piece",
-    imgUrl: jacket02,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jacket02.jpg' ,
     category: "Jacket",
     price: 899,
     shortDesc:
@@ -249,7 +226,7 @@ const products = [
   {
     id: "11",
     productName: "Trafalgar One Piece",
-    imgUrl: jacket03,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jacket03.jpg',
     category: "Jacket",
     price: 899,
     shortDesc:
@@ -272,7 +249,7 @@ const products = [
   {
     id: "12",
     productName: "One Piece Jacket",
-    imgUrl: jacket04,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jacket04.jpg',
     category: "Jacket",
     price: 899,
     shortDesc:
@@ -294,7 +271,7 @@ const products = [
   {
     id: "13",
     productName: "Jersy Design1",
-    imgUrl: jersey01,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jersey01.jpg',
     category: "Jersey",
     price: 1120,
     shortDesc:
@@ -316,7 +293,7 @@ const products = [
   {
     id: "14",
     productName: "Jersy Design2",
-    imgUrl: jersey02,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jersey02.jpg',
     category: "Jersey",
     price: 1120,
     shortDesc:
@@ -339,7 +316,7 @@ const products = [
   {
     id: "15",
     productName: "Jersy Design3",
-    imgUrl: jersey03,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jersey03.jpg',
     category: "Jersey",
     price: 1120,
     shortDesc:
@@ -362,7 +339,7 @@ const products = [
   {
     id: "16",
     productName: "Jersy Design4",
-    imgUrl: jersey04,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/jersey04.jpg',
     category: "Jersey",
     price: 1120,
     shortDesc:
@@ -384,7 +361,7 @@ const products = [
   {
     id: "17",
     productName: "One Piece Cap",
-    imgUrl: cap01,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/cap01.jpg',
     category: "Cap",
     price: 299,
     shortDesc:
@@ -407,7 +384,7 @@ const products = [
   {
     id: "18",
     productName: "PlayBoy Cap",
-    imgUrl: cap02,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/cap02.jpg',
     category: "Cap",
     price: 299,
     shortDesc:
@@ -430,7 +407,7 @@ const products = [
   {
     id: "19",
     productName: "Zombie Cap",
-    imgUrl: cap03,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/cap03.jpg',
     category: "Cap",
     price: 399,
     shortDesc:
@@ -453,7 +430,7 @@ const products = [
   {
     id: "20",
     productName: "BlackBalls Cap",
-    imgUrl: cap04,
+    imgUrl: 'https://rilbesib.sirv.com/Images/Print%20Studio/cap04.jpg',
     category: "Cap",
     price: 199,
     shortDesc:
