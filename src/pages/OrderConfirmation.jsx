@@ -4,6 +4,7 @@ import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../redux/slices/cartSlice';
+import { px } from 'framer-motion';
 
 
 
@@ -45,15 +46,15 @@ const OrderConfirmation = () => {
                             <p className="text-center fw-bold mb-1">Delivery Dates:</p>
                         </div>
                         <Row>
-                            <Col  className="d-flex align-items-center justify-content-evenly">
-                                <p className="fw-bold fs-5"> Est: {current.toDateString()} - {current1.toDateString()}</p>
+                            <Col   className="d-flex align-items-center justify-content-evenly">
+                                <p className="fw-bold fs-5 text-center" style={{minWidth:"240px"}}> Est: {current.toDateString()} - {current1.toDateString()}</p>
                             </Col>
-                            <Col >
-                                <ul className="list-group list-group-horizontal">
+                            <Col>
+                                <ul className=" d-flex flex-wrap justify-content-center " style={{minWidth:"240px", margin:"0px", padding:"0px"}}>
                                     {cartItems.map((item) => {
                                         console.log(item.image);
                                         return (
-                                            <li className="p-1 list-group-item"> <img src={item.image} alt='' style={{ width: "100px", height: "100px" }} /></li>
+                                            <li className="p-1 border rounded "> <img src={item.image} alt='' style={{ width: "100px", height: "100px" }} /></li>
 
                                         )
                                     })}
