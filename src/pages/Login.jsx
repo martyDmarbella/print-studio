@@ -100,7 +100,7 @@ function Login() {
                             </div>
                             <div class="form-group mt-2">
                               <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={formik.handleChange} value={formik.values.password} />
-                              <i class="fa-solid fa-arrow-up-left"></i>
+                              <i class="fa-solid fa-arrow-up-right"></i>
                             </div>
                             <a href="#" class="btn mt-4" onClick={navigateToCart} >submit</a>
                             <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
