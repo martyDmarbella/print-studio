@@ -42,7 +42,7 @@ function Login() {
   });
 
   const navigate = useNavigate();
-  const navigateToCart = () => {
+  const navigateToAccount = () => {
     navigate('/account');
   }
 
@@ -76,14 +76,14 @@ function Login() {
         </div>
       </div> */}
       <Helmet title='Login'>
-        <CommonSection title='Login/Sign-up' />
+        <CommonSection title='Sign-in/Sign-up' />
 
         <div class="section">
           <form onSubmit={formik.handleSubmit} class="container">
             <div class="row justify-content-center">
               <div class="col-12 text-center align-self-center py-5">
                 <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                  <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                  <h6 class="mb-0 pb-3"><span>Log In</span><span>Sign Up</span></h6>
                   <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                   <label for="reg-log"></label>
                   <div class="card-3d-wrap mx-auto">
@@ -96,13 +96,13 @@ function Login() {
                             </h4>
                             <div class="form-group">
                               <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" required autocomplete="off" onChange={formik.handleChange} value={formik.values.email} />
-                              <i class="fa-solid fa-arrow-up-left"></i>
+                              <i class="input-icon uil uil-at"></i>
                             </div>
                             <div class="form-group mt-2">
                               <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={formik.handleChange} value={formik.values.password} />
-                              <i class="fa-solid fa-arrow-up-right"></i>
+                              <i class="input-icon uil uil-at"></i>
                             </div>
-                            <a href="#" class="btn mt-4" onClick={navigateToCart} >submit</a>
+                            <a href="#" class="btn mt-4" onClick={navigateToAccount} >submit</a>
                             <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
                           </div>
                         </div>
@@ -125,7 +125,7 @@ function Login() {
                               <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={formik.handleChange} value={formik.values.password} />
                               <i class="input-icon uil uil-lock-alt"></i>
                             </div>
-                            <a href="#" class="btn mt-4" onClick={navigateToCart}>submit</a>
+                            <a href="#" class="btn mt-4" onClick={navigateToAccount}>submit</a>
                           </div>
                         </div>
                       </div>
