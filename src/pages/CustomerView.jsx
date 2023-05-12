@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function CustomerView() {
     const navigate = useNavigate();
   const handleLogin = () => {
-    navigate('/login');
+    navigate('/');
   };
 //   const handleOrderClick = () => {
 //     navigate('/cart');

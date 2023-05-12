@@ -65,7 +65,7 @@ const Header = () => {
     navigate('/cart');
   };
   const handleProfileClick = () => {
-    navigate('/account');
+    navigate('/login');
   }
 
   return (

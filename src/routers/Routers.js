@@ -14,6 +14,8 @@ import CustomerAddresses from '../pages/CustomerAddresses';
 import Form from '../pages/Form';
 import Orders from '../pages/Orders';
 import OrderConfirmation from '../pages/OrderConfirmation';
+import Logout from '../pages/Logout';
+// import RegisterForm from '../UI/RegisterForm';
 
 
 const Routers = () => {
@@ -32,6 +34,8 @@ const Routers = () => {
       <Route path='/orders' element={<Orders />} />
       <Route path='/account' element={<CustomerAccount />} />
       <Route path='/form' element={<Form />} />
+      <Route path='/home' element={<Logout />} />
+      {/* <Route path='/register' element={<RegisterForm />} /> */}
       <Route path='/customer-addresses' element={<CustomerAddresses />} />
       <Route path='/order-confirmation' element={<OrderConfirmation />} />
     </Routes>

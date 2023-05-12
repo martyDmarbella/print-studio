@@ -50,7 +50,7 @@ function CustomerAccount() {
           <div className="row gx-5 gy-5">
 
             <div className="col-xl-3 col-lg-4">
-              <div className="bg-light text-center p-4 rounded-top-lg border border-bottom-0"><a className="d-inline-block" href="#Profile"><img className="img-fluid rounded-circle img-thumbnail p-2 mb-3" src={jaime} width="150" alt="..." /></a>
+              <div className="bg-light text-center p-4 rounded-top-lg border border-bottom-0"><a className="d-inline-block" href="#Profile"><img className="{handleUpload}" src={jaime} width="150" alt="..." /></a>
                 <h5>Jaime Yanoc</h5>
                 <p className="text-muted text-small">Cebu, Philippines</p>
               </div>
