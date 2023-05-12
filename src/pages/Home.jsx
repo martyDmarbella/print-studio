@@ -169,7 +169,7 @@ const Home = () => {
               <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src={jayson} alt="Avatar" style={{ width: "100%" }} />
+                    <img src={jayson} alt="Avatar" style={{ width: "100%", borderRadius: "10px" }} />
                   </div>
                   <div className="flip-card-back">
                     <h3>Jayson Herrera</h3>
@@ -180,7 +180,7 @@ const Home = () => {
               <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src={jaime} alt="Avatar" style={{ width: "100%" }} />
+                    <img src={jaime} alt="Avatar" style={{ width: "100%", borderRadius: "10px" }} />
                   </div>
                   <div className="flip-card-back">
                     <h3>Jaime Yanoc</h3>
@@ -191,7 +191,7 @@ const Home = () => {
               <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src={marty} alt="Avatar" style={{ width: "100%" }} />
+                    <img src={marty} alt="Avatar" style={{ width: "100%", borderRadius: "10px" }} />
                   </div>
                   <div className="flip-card-back">
                     <h3>Marty D. Marbella</h3>
@@ -202,7 +202,7 @@ const Home = () => {
               <div className="flip-card">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img src={iris} alt="Avatar" style={{ width: "100%" }} />
+                    <img src={iris} alt="Avatar" style={{ width: "100%", borderRadius: "10px" }} />
                   </div>
                   <div className="flip-card-back">
                     <h3>Iris Raymundo</h3>
@@ -211,6 +211,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>

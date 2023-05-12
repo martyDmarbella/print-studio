@@ -89,8 +89,8 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="row mt-5">
-              <div className="col-sm-3">
+            <div className="row mt-5 mx-auto">
+              <div className="col-sm-3 col-12">
                 <div className="card text-center">
                   <img src={jayson} className="rounded-pill mx-auto d-block mt-3" alt="image1" style={{ width: '100px' }} />
                   <div className="card-body">
@@ -110,15 +110,11 @@ const AboutUs = () => {
                         <i className="fa-brands fa-instagram fa-lg"></i>
                       </a>
                       </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
                     </ul>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-12">
                 <div className="card text-center">
                   <img src={jaime} className="rounded-pill mx-auto d-block mt-3" alt="image2" style={{ width: '100px' }} />
                   <div className="card-body">
@@ -138,15 +134,11 @@ const AboutUs = () => {
                         <i className="fa-brands fa-instagram fa-lg"></i>
                       </a>
                       </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
                     </ul>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-12">
                 <div className="card text-center">
                   <img src={marty} className="rounded-pill mx-auto d-block mt-3" alt="image3" style={{ width: '100px' }} />
                   <div className="card-body">
@@ -166,21 +158,17 @@ const AboutUs = () => {
                         <i className="fa-brands fa-instagram fa-lg"></i>
                       </a>
                       </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
-                    </ul>
+                   </ul>
                   </div>
                 </div>
               </div>
-              <div className="col-sm-3">
+              <div className="col-sm-3 col-12">
                 <div className="card text-center">
                   <img src={iris} className="rounded-pill mx-auto d-block mt-3" alt="image4" style={{ width: '100px' }} />
                   <div className="card-body">
                     <h5 className="card-title">Iris Raymundo</h5>
                     <p className="card-text">Web Developer and Designer
-                    Iris Raymundo is a beautiful lady web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly websites that meet the specific needs of clients.</p>
+                    Iris Raymundo is a web developer at Print Studio.She has contributed greatly. Iris is known for her exceptional ability to design and develop visually stunning and user-friendly websites that meet the specific needs of clients.</p>
                     <ul className="team-icon me-4">
                       <li><a href="#Soc" className="twitter">
                         <i className="fa-brands fa-twitter fa-lg"></i>
@@ -194,10 +182,6 @@ const AboutUs = () => {
                         <i className="fa-brands fa-instagram fa-lg"></i>
                       </a>
                       </li>
-                      {/* <li><a href="#Soc" className="googleplus">
-                        <i class="fa-brands fa-google-plus-g fa-lg"></i>
-                      </a>
-                      </li> */}
                     </ul>
                   </div>
                 </div>

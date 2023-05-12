@@ -55,7 +55,7 @@ const Cart = () => {
                           <td>₱{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>
-                            <i className="fa fa-trash" onClick={() => handleRemoveItem(index)}></i>
+                          <i className="fa fa-trash" onClick={() => handleRemoveItem(index)} style={{ cursor: 'pointer' }}></i>
                           </td>
                         </tr>
                       )
