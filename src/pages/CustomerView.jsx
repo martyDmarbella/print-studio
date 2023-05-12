@@ -25,7 +25,7 @@ function CustomerView() {
                         <FontAwesomeIcon icon={faMapMarker} />
                         Addresses
                     </span></a>
-                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/logout">
+                <a className="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="/home">
                     <span className="fw-normal text-sm text-dark py-1" onClick={handleLogin}>
                         <FontAwesomeIcon icon={faKey} />Log out</span></a>
             </nav>

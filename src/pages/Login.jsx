@@ -7,8 +7,6 @@ import '../styles/login.css'
 import Helmet from '../components/Helmet/Helmet';
 import CommonSection from '../components/UI/CommonSection';
 
-
-
 const validationSchema = yup.object({
   email: yup.string()
     .email("Invalid email format")
@@ -17,7 +15,6 @@ const validationSchema = yup.object({
     .required("Password is required")
     .min(8, "Password must be at least 8 characters long"),
 });
-
 
 function Login() {
 
@@ -45,39 +42,10 @@ function Login() {
   const navigateToCart = () => {
     navigate('/account');
   }
-
-
   return (
     <>
-      {/* <div className='container d-flex justify-content-center m-8'>
-        <div className='col-4 m-5'>
-          <main className="form-signin w-100 m-auto ">
-            <form onSubmit={formik.handleSubmit}>
-              <h1 className="h3 mb-3 fw-normal d-flex justify-content-center">Please sign in</h1>
-
-              <div className="form-floating">
-                <input type="email" name='email' className="form-control" id="floatingInput" required placeholder="name@example.com" onChange={formik.handleChange} value={formik.values.email} />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div className="form-floating">
-                <input type="password" name='password' className="form-control" id="floatingPassword" required placeholder="Password" onChange={formik.handleChange} value={formik.values.password} />
-                <label for="floatingPassword">Password</label>
-              </div>
-
-              <div className="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me" name='remember_me' /> Remember me
-                </label>
-              </div>
-              <button className="w-100 btn btn-lg btn-primary m-1" type="submit" onClick={navigateToCart}>Sign in</button>
-             
-            </form>
-            </main>
-        </div>
-      </div> */}
       <Helmet title='Login'>
         <CommonSection title='Login/Sign-up' />
-
         <div class="section">
           <form onSubmit={formik.handleSubmit} class="container">
             <div class="row justify-content-center">
@@ -140,6 +108,5 @@ function Login() {
     </>
   );
 }
-
 
 export default Login;
