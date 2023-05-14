@@ -9,7 +9,19 @@ import CommonSection from '../components/UI/CommonSection';
 
 
 
-const validationSchema = yup.object({
+const loginValidationSchema = yup.object({
+  email: yup.string()
+    .email("Invalid email format")
+    .required("Email address is required"),
+  password: yup.string()
+    .required("Password is required")
+    .min(8, "Password must be at least 8 characters long"),
+});
+
+const registerValidationSchema = yup.object({
+  name: yup.string()
+    .required("Name is required")
+    .min(4, "Name must be at least 4 characters long"),
   email: yup.string()
     .email("Invalid email format")
     .required("Email address is required"),
@@ -21,65 +33,60 @@ const validationSchema = yup.object({
 
 function Login() {
 
-  const formik = useFormik({
+  const loginFormik = useFormik({
     initialValues: {
-      name:"",
       email: "",
       password: "",
     },
-    validationSchema,
+    validationSchema: loginValidationSchema,
     onSubmit: (values) => {
-      axios.post('http://127.0.0.1:8000/api/login', {
+      axios.post('http://127.0.0.1:3306/api/login', {
         name: values.name,
         email: values.email,
         password: values.password
-      }).validateOnChange((reponse) => {
-        console.log(reponse);
+      }).then((response) => {
+        const { data } = response;
+        alert(data.message);
+        localStorage.setItem('userToken', data.token);
       }).catch((err) => {
-        console.log(err);
+        console.error(err);
+      });
+    }
+  });
+  const registerFormik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      password: "",
+    },
+    validationSchema: registerValidationSchema,
+    onSubmit: (values) => {
+      axios.post('http://127.0.0.1:3306/api/register', {
+        name: values.name,
+        email: values.email,
+        password: values.password
+      }).then((response) => {
+        const { data } = response;
+        alert(data.message);
+        localStorage.setItem('userToken', data.token);
+      }).catch((err) => {
+        console.error(err);
       });
     }
   });
 
-  const navigate = useNavigate();
-  const navigateToAccount = () => {
-    navigate('/account');
-  }
+  // const navigate = useNavigate();
+  // const navigateToAccount = () => {
+  //   navigate('/account');
+  // }
 
 
   return (
     <>
-      {/* <div className='container d-flex justify-content-center m-8'>
-        <div className='col-4 m-5'>
-          <main className="form-signin w-100 m-auto ">
-            <form onSubmit={formik.handleSubmit}>
-              <h1 className="h3 mb-3 fw-normal d-flex justify-content-center">Please sign in</h1>
-
-              <div className="form-floating">
-                <input type="email" name='email' className="form-control" id="floatingInput" required placeholder="name@example.com" onChange={formik.handleChange} value={formik.values.email} />
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div className="form-floating">
-                <input type="password" name='password' className="form-control" id="floatingPassword" required placeholder="Password" onChange={formik.handleChange} value={formik.values.password} />
-                <label for="floatingPassword">Password</label>
-              </div>
-
-              <div className="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me" name='remember_me' /> Remember me
-                </label>
-              </div>
-              <button className="w-100 btn btn-lg btn-primary m-1" type="submit" onClick={navigateToCart}>Sign in</button>
-             
-            </form>
-            </main>
-        </div>
-      </div> */}
       <Helmet title='Login'>
         <CommonSection title='Sign-in/Sign-up' />
 
         <div class="section">
-          <form onSubmit={formik.handleSubmit} class="container">
             <div class="row justify-content-center">
               <div class="col-12 text-center align-self-center py-5">
                 <div class="section pb-5 pt-5 pt-sm-2 text-center">
@@ -94,16 +101,21 @@ function Login() {
                             <h4 class="pb-3">
                               <img src="https://inevelle.sirv.com/assets/images/logo_white_sign%20in.svg" alt="logo" style={{width:"200px"}}/>
                             </h4>
-                            <div class="form-group">
-                              <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" required autocomplete="off" onChange={formik.handleChange} value={formik.values.email} />
-                              <i class="input-icon uil uil-at"></i>
-                            </div>
-                            <div class="form-group mt-2">
-                              <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={formik.handleChange} value={formik.values.password} />
-                              <i class="input-icon uil uil-at"></i>
-                            </div>
-                            <a href="#" class="btn mt-4" onClick={navigateToAccount} >submit</a>
-                            <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                            
+                            <form onSubmit={loginFormik.handleSubmit} class="container">
+                              <div class="form-group">
+                                <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" required autocomplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.email} />
+                                <i class="input-icon uil uil-at"></i>
+                              </div>
+                              <div class="form-group mt-2">
+                                <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.password} />
+                                <i class="input-icon uil uil-at"></i>
+                              </div>
+                              <a href="#" class="btn mt-4" type='submit' 
+                              // onClick={navigateToAccount} 
+                              >submit</a>
+                              <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -113,19 +125,25 @@ function Login() {
                             <h4 class="pb-3">
                             <img src="https://inevelle.sirv.com/assets/images/logo_white_sign_up.svg" alt="logo" style={{width:"200px"}}/>
                             </h4>
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-style" placeholder="Your Full Name" id="logname" required autocomplete="off" onChange={formik.handleChange} value={formik.values.name} />
-                              <i class="input-icon uil uil-user"></i>
-                            </div>
-                            <div class="form-group mt-2">
-                              <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" required autocomplete="off" onChange={formik.handleChange} value={formik.values.email} />
-                              <i class="input-icon uil uil-at"></i>
-                            </div>
-                            <div class="form-group mt-2">
-                              <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={formik.handleChange} value={formik.values.password} />
-                              <i class="input-icon uil uil-lock-alt"></i>
-                            </div>
-                            <a href="#" class="btn mt-4" onClick={navigateToAccount}>submit</a>
+                            
+                            <form onSubmit={registerFormik.handleSubmit} class="container">
+                              <div class="form-group">
+                                <input type="text" name="name" class="form-style" placeholder="Your Full Name" id="logname" required autocomplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.name} />
+                                <i class="input-icon uil uil-user"></i>
+                              </div>
+                              <div class="form-group mt-2">
+                                <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" required autocomplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.email} />
+                                <i class="input-icon uil uil-at"></i>
+                              </div>
+                              <div class="form-group mt-2">
+                                <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" required autocomplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.password} />
+                                <i class="input-icon uil uil-lock-alt"></i>
+                              </div>
+                              <a href="#" class="btn mt-4" 
+                              type='submit'
+                              // onClick={navigateToAccount}
+                              >submit</a>
+                            </form>
                           </div>
                         </div>
                       </div>
@@ -134,7 +152,6 @@ function Login() {
                 </div>
               </div>
             </div>
-            </form>
         </div>
       </Helmet>
     </>

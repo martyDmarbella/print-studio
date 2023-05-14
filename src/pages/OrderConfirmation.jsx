@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
 import { cartActions } from '../redux/slices/cartSlice';
 import { px } from 'framer-motion';
+import CommonSection from '../components/UI/CommonSection';
 
 
 
@@ -37,6 +38,7 @@ const OrderConfirmation = () => {
     return (
         <>
             <Helmet title='OrderConfirmation'>
+                <CommonSection title='Order Details' />
                 <section>
                     <Container >
                         <div>
