@@ -22,6 +22,9 @@ const registerValidationSchema = yup.object({
   name: yup.string()
     .required("Name is required")
     .min(4, "Name must be at least 4 characters long"),
+    username: yup.string()
+    .required("Username is required")
+    .min(4, "Username must be at least 4 characters long"),
   email: yup.string()
     .email("Invalid email format")
     .required("Email address is required"),
@@ -63,6 +66,7 @@ function Login() {
     onSubmit: (values) => {
       axios.post('http://127.0.0.1:8000/api/register', {
         name: values.name,
+        username: values.username,
         email: values.email,
         password: values.password
       }).then((response) => {
@@ -104,16 +108,16 @@ function Login() {
                             
                             <form onSubmit={loginFormik.handleSubmit} className="container">
                               <div className="form-group">
-                                <input type="email" name="email" className="form-style" placeholder="Your Email" id="logemail" required autoComplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.email} />
+                                <input type="email" name="email" className="form-style" placeholder="Your Email" id="logedEmail" required autoComplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.email} />
                                 <i className="input-icon uil uil-at"></i>
                               </div>
                               <div className="form-group mt-2">
-                                <input type="password" name="password" className="form-style" placeholder="Your Password" id="logpass" required autoComplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.password} />
+                                <input type="password" name="password" className="form-style" placeholder="Your Password" id="logedPass" required autoComplete="off" onChange={loginFormik.handleChange} value={loginFormik.values.password} />
                                 <i className="input-icon uil uil-at"></i>
                               </div>
-                              <a href="/" className="btn mt-4" type='submit' 
-                              onClick={navigateToAccount} 
-                              >submit</a>
+                              <button className="btn mt-4" type='submit' 
+                              
+                              >submit</button>
                               <p className="mb-0 mt-4 text-center"><a href="/" className="link">Forgot your password?</a></p>
                             </form>
                           </div>
@@ -128,21 +132,25 @@ function Login() {
                             
                             <form onSubmit={registerFormik.handleSubmit} className="container">
                               <div className="form-group">
-                                <input type="text" name="name" className="form-style" placeholder="Your Full Name" id="logname" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.name} />
+                                <input type="text" name="name" className="form-style" placeholder="Your Full Name" id="logName" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.name} />
                                 <i className="input-icon uil uil-user"></i>
                               </div>
                               <div className="form-group mt-2">
-                                <input type="email" name="email" className="form-style" placeholder="Your Email" id="logemail" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.email} />
+                                <input type="username" name="username" className="form-style" placeholder="Your Username" id="logUsername" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.username} />
+                                <i className="input-icon uil uil-user"></i>
+                              </div>
+                              <div className="form-group mt-2">
+                                <input type="email" name="email" className="form-style" placeholder="Your Email" id="logEmail" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.email} />
                                 <i className="input-icon uil uil-at"></i>
                               </div>
                               <div className="form-group mt-2">
-                                <input type="password" name="password" className="form-style" placeholder="Your Password" id="logpass" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.password} />
+                                <input type="password" name="password" className="form-style" placeholder="Your Password" id="logPass" required autoComplete="off" onChange={registerFormik.handleChange} value={registerFormik.values.password} />
                                 <i className="input-icon uil uil-lock-alt"></i>
                               </div>
-                              <a href="/" className="btn mt-4" 
+                              <button className="btn mt-4" 
                               type='submit'
-                              onClick={navigateToAccount}
-                              >submit</a>
+                              
+                              >submit</button>
                             </form>
                           </div>
                         </div>
