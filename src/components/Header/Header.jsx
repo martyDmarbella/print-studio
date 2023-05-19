@@ -24,10 +24,6 @@ const nav_links = [
     path: 'about-us',
     display: 'About Us',
   },
-  // {
-  //   path: 'cart',
-  //   display: 'Cart',
-  // },
   {
     path: 'contact-us',
     display: 'Contact Us',
